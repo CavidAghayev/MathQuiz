@@ -1,4 +1,4 @@
-import './../assets/css/Home.css'
+import './../../pages/Home/Home.css'
 function Home() {
   return (
     <div className="home">

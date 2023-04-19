@@ -1,4 +1,4 @@
-import './../assets/css/Login.css'
+import './../../pages/Login/Login.css'
 function Login() {
   return (
     <div className='login'>

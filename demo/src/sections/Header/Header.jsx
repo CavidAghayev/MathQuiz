@@ -1,6 +1,6 @@
-import './../assets/css/Header.css'
+import './../../sections/Header/Header.css'
 import { NavLink , useNavigate } from 'react-router-dom'
-import Button from '../companents/Button/Button'
+import Button from '../../companents/Button/Button'
 function Header() {
     const navigate = useNavigate()
   return (
