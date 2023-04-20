@@ -5,6 +5,9 @@
     text-indent: 10px;
 }
 .input--sm{
+    height: 23px;
+}
+.input--md{
     height: 46px;
 }
 
@@ -12,13 +15,30 @@
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
-line-height: 22px;
+line-height: 21px;
 color: #8A7E7E;
 margin-bottom: 4px;
 }
 
-.form .input:first-child{
+.form :nth-child(2){
     margin-bottom: 15px;
+}
+
+.forgot__password{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+}
+.forgot__password span{
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+color: #8A7E7E;
+}
+
+.checkbox{
+    width: 23px;
 }
 
 
