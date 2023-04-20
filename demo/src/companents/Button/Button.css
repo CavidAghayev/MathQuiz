@@ -20,6 +20,11 @@
 }
 
 
+.button--secondary{
+    background-color:  #EBB44A;
+    border: 2px solid #EBB44A;
+}
+
 .button--sm {
     height: 23px;
 }

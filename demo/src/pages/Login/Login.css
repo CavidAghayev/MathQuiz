@@ -1,12 +1,49 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
+header{
+    display: none;
 }
 .login{
-    background-color: red;
-    height: 200px;
+    width: 100%;
+    padding: 82px 53px;
+}
+
+.login__content{
+    background: #F5F5FF;
+    border-radius: 35px;
+    display: flex;
+}
+
+.login__details{
+    padding: 85px 90px;
+}
+
+.login__board{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    
+    border-radius: 20px;
+    padding: 40px 40px;
+}
+
+.login__exam-tests{
+    background-image: url('./../../assets/images/OM6UUZ0\ 1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.login__board__heading h4{
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 33px;
+color: #2B2A2A;
+}
+
+.login__board__heading span{
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+color: #8A7E7E;
 }
