@@ -4,7 +4,15 @@ import Button from "../../companents/Button/Button";
 import { useState } from "react";
 function Login() {
   const [formData, setFormData] = useState({});
-
+  let inputId = document.getElementById("password")
+  function checkboxItem(){
+if(inputId.type === "password"){
+  inputId.type = "text"
+}
+else{
+  inputId.type = "password"
+}cd
+  }
   return (
     <div className="login">
       <div className="login__content">
@@ -35,15 +43,16 @@ function Login() {
                   id="password"
                   type="password"
                   text="Password"
-                />
+                  />
               </form>
+              <div className="input__icon"></div>
               <div className="forgot__password">
                 <span>Forgot password</span>
               </div>
             </div>
             <div className="login__board__privacy-policy">
               <div className="checkbox">
-                <Input size={"sm"} type={"checkbox"} />
+                <Input  onClick={()=>checkboxItem()} size={"sm"} type={"checkbox"} />
               </div>
               <div className="privacy-policy__text">
                 <p>I accept (name) and Terms of Services</p>

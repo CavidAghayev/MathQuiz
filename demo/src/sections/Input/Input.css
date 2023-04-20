@@ -4,6 +4,16 @@
     border-radius: 6px;
     text-indent: 10px;
 }
+
+.label{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #8A7E7E;
+    margin-bottom: 4px;
+    }
+
 .input--sm{
     height: 23px;
 }
@@ -11,35 +21,7 @@
     height: 46px;
 }
 
-.label{
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 21px;
-color: #8A7E7E;
-margin-bottom: 4px;
-}
 
-.form :nth-child(2){
-    margin-bottom: 15px;
-}
-
-.forgot__password{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 6px;
-}
-.forgot__password span{
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 19px;
-color: #8A7E7E;
-}
-
-.checkbox{
-    width: 23px;
-}
 
 
 
