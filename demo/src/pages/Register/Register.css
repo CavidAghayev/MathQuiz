@@ -1,0 +1,205 @@
+.register {
+    width: 100%;
+    padding: 82px 53px;
+}
+
+.register__content {
+    background: #F5F5FF;
+    border-radius: 35px;
+    display: flex;
+}
+
+.register__details {
+    width: 50%;
+    padding: 85px 90px;
+}
+
+.register__board {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+
+    border-radius: 20px;
+    padding: 40px 40px;
+
+}
+
+.register__exam-tests {
+    width: 50%;
+    background-image: url('../../assets/images/OM6UUZ0\ 1.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translate();
+}
+
+.register__board__heading {
+    margin-bottom: 55px;
+}
+
+.register__board__heading h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #2B2A2A;
+    margin-bottom: 7px;
+}
+
+.who-are-you {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.who-are-you__heading h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2B2A2A;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    gap: 36px;
+}
+
+.student {
+    display: flex;
+    gap: 12px;
+}
+
+.student__checkbox {
+    width: 23px;
+}
+
+.student span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2B2A2A;
+}
+
+.teacher {
+    display: flex;
+    gap: 12px;
+}
+
+.teacher__checkbox {
+    width: 23px;
+}
+
+.teacher span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2B2A2A;
+}
+
+.register__board__form {
+    margin-bottom: 20px;
+}
+
+.form .input {
+    margin-bottom: 15px;
+}
+
+.form .input:last-child {
+    margin: 0;
+}
+
+
+.forgot__password {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #8A7E7E;
+}
+
+.forgot__password__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #675AF0;
+}
+
+.checkbox {
+    width: 23px;
+}
+
+.register__board__privacy-policy {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 182px;
+}
+
+
+.privacy-policy__text p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8A7E7E;
+}
+
+.privacy-policy__text span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #675AF0;
+    cursor: pointer;
+}
+
+.privacy-policy__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #675AF0;
+}
+
+.register__or {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    
+}
+
+.register__or span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8A7E7E;
+    position: relative;
+}
+.register__or span::before{
+    content: "";
+    width: 100px;
+    border: 1px solid #C5C4C4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+}
+.register__or span::after{
+    content: "";
+    width: 100px;
+    border: 1px solid #C5C4C4;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -2,7 +2,7 @@
     width: 100%;
     border: 1px solid #D2D2D2;
     border-radius: 6px;
-    text-indent: 10px;
+    padding: 0 10px;
 }
 
 .label{
@@ -12,6 +12,7 @@
     line-height: 21px;
     color: #8A7E7E;
     margin-bottom: 4px;
+    display: inline-block;
     }
 
 .input--sm{

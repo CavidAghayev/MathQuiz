@@ -22,15 +22,14 @@ function Header() {
         </div>
         <div className="header__buttons">
           <div
-            onClick={() => navigate("/login")}
             className="header__button__login"
           >
-            <Button color={"white"} size={"md"}>
+            <Button onClick={()=>navigate("/login")} color={"white"} size={"md"}>
               {"Log in"}
             </Button>
           </div>
           <div className="header__button__sign">
-            <Button color={"primary"} size={"md"}>
+            <Button onClick={()=>navigate("/register")} color={"primary"} size={"md"}>
               {"Sign up"}
             </Button>
           </div>

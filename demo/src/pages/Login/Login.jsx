@@ -1,6 +1,7 @@
 import "./../../pages/Login/Login.css";
 import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
+import { Link } from 'react-router-dom'
 import { useState } from "react";
 function Login() {
   const [formData, setFormData] = useState({});
@@ -47,7 +48,7 @@ else{
               </form>
               <div className="input__icon"></div>
               <div className="forgot__password">
-                <span>Forgot password</span>
+                <Link className="forgot__password__link" to="">Forgot password?</Link>
               </div>
             </div>
             <div className="login__board__privacy-policy">
@@ -56,10 +57,10 @@ else{
               </div>
               <div className="privacy-policy__text">
                 <p>I accept (name) and Terms of Services</p>
-                <span>Privacy Policy</span>
+                <Link className="privacy-policy__link" to="">Privacy Policy</Link>
               </div>
             </div>
-            <div className="login__board__button--size">
+            <div className="login__board__button">
               <Button size={"lg"} color={"primary"}
               >
                 {'Login'}

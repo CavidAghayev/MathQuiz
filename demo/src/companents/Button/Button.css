@@ -13,6 +13,15 @@
     border: 2px solid #3F80BB;
 }
 
+.button--white__shadow {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border: none;
+    color:  #A39D9D;
+}
+
+
 .button--primary {
     background-color: #675AF0;
     color: #FFFFFF;
@@ -20,8 +29,8 @@
 }
 
 
-.button--secondary{
-    background-color:  #EBB44A;
+.button--secondary {
+    background-color: #EBB44A;
     border: 2px solid #EBB44A;
 }
 

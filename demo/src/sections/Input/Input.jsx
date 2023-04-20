@@ -1,5 +1,5 @@
 import "./../Input/Input.css";
-const Input = ({ size, id, type, text, onChange, value = "", onClick }) => {
+const Input = ({ size, id, type, text, date, onChange, value = "", onClick, }) => {
   return (
     <>
       <label className="label" htmlFor={id}>
@@ -12,6 +12,7 @@ const Input = ({ size, id, type, text, onChange, value = "", onClick }) => {
         className={`input input--${size}`}
         type={type}
         id={id}
+        date={date}
       />
     </>
   );
