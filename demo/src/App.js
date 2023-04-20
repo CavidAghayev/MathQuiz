@@ -7,7 +7,7 @@ function App() {
   return (
     <>
 <Router>
-    { window.location.href !== 'http://localhost:3000/login'?<Header/> : null}
+    <Header/>
   <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/login' element={<Login />} />

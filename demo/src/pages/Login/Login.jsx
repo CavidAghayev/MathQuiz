@@ -11,10 +11,10 @@ if(inputId.type === "password"){
 }
 else{
   inputId.type = "password"
-}cd
+}
   }
   return (
-    <div className="login">
+    <div className="login section">
       <div className="login__content">
         <div className="login__details">
           <div className="login__board">
