@@ -1,4 +1,4 @@
-header{
+header {
     width: 100%;
     /* padding: 24px 0 23px 0; */
     height: 90px;
@@ -11,46 +11,45 @@ header{
     background-color: #FFFFFF;
 }
 
-.header__content{
+.header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__logo{
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 33px;
-color: #675AF0;
-cursor: pointer;
+.header__logo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #675AF0;
+    cursor: pointer;
 }
 
 .header__routes__exam,
 .header__routes__online-videos,
-.header__routes__about{
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 21px;
-color: #2B2A2A;
+.header__routes__about {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2B2A2A;
 }
 
-.header__routes{
+.header__routes {
     display: flex;
     gap: 70px;
 }
 
-.header__buttons{
+.header__buttons {
     display: flex;
     gap: 51px;
 }
 
-.header__button__login{
+.header__button__login {
     width: 118px;
 }
 
-.header__button__sign{
+.header__button__sign {
     width: 118px;
 }
-

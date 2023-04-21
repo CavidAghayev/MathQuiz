@@ -21,15 +21,21 @@ function Header() {
           </NavLink>
         </div>
         <div className="header__buttons">
-          <div
-            className="header__button__login"
-          >
-            <Button onClick={()=>navigate("/login")} color={"white"} size={"md"}>
+          <div className="header__button__login">
+            <Button
+              onClick={() => navigate("/login")}
+              color={"white"}
+              size={"md"}
+            >
               {"Log in"}
             </Button>
           </div>
           <div className="header__button__sign">
-            <Button onClick={()=>navigate("/register")} color={"primary"} size={"md"}>
+            <Button
+              onClick={() => navigate("/register")}
+              color={"primary"}
+              size={"md"}
+            >
               {"Sign up"}
             </Button>
           </div>

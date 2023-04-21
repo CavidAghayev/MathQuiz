@@ -1,0 +1,47 @@
+.exam {
+    padding: 20px 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    width: 210px;
+    height: 258px;
+}
+
+.exam__image {
+    width: 148px;
+    height: 98px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+.exam__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exam__info {
+    margin-bottom: 33px;
+}
+
+.exam__info h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2B2A2A;
+    margin-bottom: 5px;
+}
+
+.exam__info span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #8A7E7E;
+}
+
+.exam__buttons {
+    display: flex;
+    gap: 9px;
+}

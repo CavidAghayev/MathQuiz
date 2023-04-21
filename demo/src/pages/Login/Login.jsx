@@ -1,18 +1,17 @@
 import "./../../pages/Login/Login.css";
 import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { useState } from "react";
 function Login() {
   const [formData, setFormData] = useState({});
-  let inputId = document.getElementById("password")
-  function checkboxItem(){
-if(inputId.type === "password"){
-  inputId.type = "text"
-}
-else{
-  inputId.type = "password"
-}
+  let inputId = document.getElementById("password");
+  function checkboxItem() {
+    if (inputId.type === "password") {
+      inputId.type = "text";
+    } else {
+      inputId.type = "password";
+    }
   }
   return (
     <div className="login section">
@@ -44,27 +43,33 @@ else{
                   id="password"
                   type="password"
                   text="Password"
-                  />
+                />
               </form>
               <div className="input__icon"></div>
               <div className="forgot__password">
-                <Link className="forgot__password__link" to="">Forgot password?</Link>
+                <Link className="forgot__password__link" to="">
+                  Forgot password?
+                </Link>
               </div>
             </div>
             <div className="login__board__privacy-policy">
               <div className="checkbox">
-                <Input  onClick={()=>checkboxItem()} size={"sm"} type={"checkbox"} />
+                <Input
+                  onClick={() => checkboxItem()}
+                  size={"sm"}
+                  type={"checkbox"}
+                />
               </div>
               <div className="privacy-policy__text">
                 <p>I accept (name) and Terms of Services</p>
-                <Link className="privacy-policy__link" to="">Privacy Policy</Link>
+                <Link className="privacy-policy__link" to="">
+                  Privacy Policy
+                </Link>
               </div>
             </div>
             <div className="login__board__button">
-              <Button size={"lg"} color={"primary"}
-              >
-                {'Login'}
-
+              <Button size={"lg"} color={"primary"}>
+                {"Login"}
               </Button>
             </div>
           </div>

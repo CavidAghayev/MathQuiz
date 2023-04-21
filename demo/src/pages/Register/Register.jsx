@@ -1,7 +1,7 @@
 import "../Register/Register.css";
 import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
-import { Link } from  "react-router-dom"
+import { Link } from "react-router-dom";
 import { useState } from "react";
 function Register() {
   const [formData, setFormData] = useState({});
@@ -24,25 +24,19 @@ function Register() {
             </div>
             <div className="who-are-you">
               <div className="who-are-you__heading">
-              <h3>I am a</h3>
+                <h3>I am a</h3>
               </div>
               <div className="options">
                 <div className="student">
                   <div className="student__checkbox">
-                  <Input
-                  type={"checkbox"}
-                  size={"sm"}
-                  />
+                    <Input type={"checkbox"} size={"sm"} />
                   </div>
                   <span>Student</span>
                 </div>
                 <div className="teacher">
-                <div className="teacher__checkbox">
-                <Input
-                  type={"checkbox"}
-                  size={"sm"}
-                  />
-                </div>
+                  <div className="teacher__checkbox">
+                    <Input type={"checkbox"} size={"sm"} />
+                  </div>
                   <span>Teacher</span>
                 </div>
               </div>
@@ -82,7 +76,9 @@ function Register() {
               </form>
               <div className="input__icon"></div>
               <div className="forgot__password">
-                <Link className="forgot__password__link" to="">Forgot password</Link>
+                <Link className="forgot__password__link" to="">
+                  Forgot password
+                </Link>
               </div>
             </div>
             <div className="register__board__privacy-policy">
@@ -95,7 +91,9 @@ function Register() {
               </div>
               <div className="privacy-policy__text">
                 <p>I accept (name) and Terms of Services</p>
-                <Link className="privacy-policy__link" to="">Privacy Policy</Link>
+                <Link className="privacy-policy__link" to="">
+                  Privacy Policy
+                </Link>
               </div>
             </div>
             <div className="register__board__button">
@@ -107,11 +105,8 @@ function Register() {
               <span>or</span>
             </div>
             <div className="google-continue">
-              <Button 
-              size={"lg"}
-              color={"white__shadow"}
-              > 
-              {"Continue with Google"}
+              <Button size={"lg"} color={"white__shadow"}>
+                {"Continue with Google"}
               </Button>
             </div>
           </div>

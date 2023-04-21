@@ -1,5 +1,14 @@
 import "./../Input/Input.css";
-const Input = ({ size, id, type, text, date, onChange, value = "", onClick, }) => {
+const Input = ({
+  size,
+  id,
+  type,
+  text,
+  date,
+  onChange,
+  value = "",
+  onClick,
+}) => {
   return (
     <>
       <label className="label" htmlFor={id}>
