@@ -26,12 +26,12 @@
 .register__exam-tests {
     width: 50%;
     background-image: url('../../assets/images/OM6UUZ0\ 1.svg');
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    transform: translate();
+    
 }
 
 .register__board__heading {
@@ -141,7 +141,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 182px;
+    margin-bottom: 42px;
 }
 
 
@@ -174,7 +174,7 @@
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    
+
 }
 
 .register__or span {
@@ -185,7 +185,8 @@
     color: #8A7E7E;
     position: relative;
 }
-.register__or span::before{
+
+.register__or span::before {
     content: "";
     width: 100px;
     border: 1px solid #C5C4C4;
@@ -194,7 +195,8 @@
     left: 50%;
     transform: translate(50%, -50%);
 }
-.register__or span::after{
+
+.register__or span::after {
     content: "";
     width: 100px;
     border: 1px solid #C5C4C4;
