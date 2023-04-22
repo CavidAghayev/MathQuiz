@@ -1,6 +1,7 @@
 import "./../../pages/Home/Home.css";
 import { useState, useEffect } from "react";
 import Exam from "../../companents/Exam/Exam";
+import Button from "../../companents/Button/Button";
 function Home() {
   const [exam, setExam] = useState([]);
   useEffect(() => {
@@ -29,11 +30,83 @@ function Home() {
           <div className="entered-exam__heading">
             <h3>İmtahana giriş</h3>
           </div>
-          <div className="entered-exam__info">
+          <div className="entered-exam__text">
             <p>
               MathQuiz vasitəsi ilə imtahana başlayarkən bir neçə <br />
               addımlardan keçirsiniz
             </p>
+          </div>
+          <div className="entered-exam__icons">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+          <div className="entered-exam__info">
+            <div className="info__content">
+              <div className="info__heading">
+                <span>İlk öncə adınızı daxil edin</span>
+              </div>
+              <div className="info__button">
+                <Button size={"sm"} color={"primary"}>
+                  {"Step 1"}
+                </Button>
+              </div>
+            </div>
+            <div className="info__content">
+              <div className="info__heading">
+                <span>İmtahanın vaxtı</span>
+              </div>
+              <div className="info__button">
+                <Button size={"sm"} color={"primary"}>
+                  {"Step 2"}
+                </Button>
+              </div>
+            </div>
+            <div className="info__content">
+              <div className="info__heading">
+                <span>İmtahanın nəticəsi</span>
+              </div>
+              <div className="info__button">
+                <Button size={"sm"} color={"primary"}>
+                  {"Step 3"}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mathQuiz-about">
+        <div className="mathQuiz-about__content container">
+          <div className="participate">
+            <div className="participate__register">
+              <h3>Sınaq imtahanında iştirak et</h3>
+              <span>Əliyar Əliyev - Riyaziyyat sınaqları</span>
+              <span>Daha çox sınaqlara qatılmaq üçün</span>
+              <div className="participate__register__button">
+                <Button
+                size={"md"}
+                color={"secondary"}
+                >
+                  {"Sign up"}
+                </Button>
+              </div>
+            </div>
+            <div className="participate__image"></div>
+          </div>
+          <div className="why-mathQuiz">
+            <div className="why-mathQuiz__image">
+
+            </div>
+            <div className="why-mathQuiz__info">
+              <div className="why-mathQuiz__info__heading">
+              <h3>Niyə MathQuiz?</h3>
+              </div>
+              <div className="why-mathQuiz__info__text">
+              <span>Online şəkildə imtahan şansı</span>
+              <span>Pulsuz imtahanlara qoşul</span>
+              <span>Giriş edərək daha çox sınaq imkanı</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
