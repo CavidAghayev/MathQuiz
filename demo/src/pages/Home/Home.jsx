@@ -3,27 +3,42 @@ import { useState, useEffect } from "react";
 import Exam from "../../companents/Exam/Exam";
 import Button from "../../companents/Button/Button";
 import { useNavigate } from "react-router-dom";
+import Students from "../../companents/Student/Student";
 function Home() {
   const navigate = useNavigate();
-  const [exam, setExam] = useState([]);
+  const [exams, setExams] = useState([]);
+  const [students, setStudents] = useState([]);
   useEffect(() => {
     fetch("http://localhost:3000/final-exams")
       .then((response) => response.json())
-      .then((exam) => {
-        setExam(exam);
-        console.log(exam);
+      .then((exams) => {
+        setExams(exams);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/students")
+      .then((response) => response.json())
+      .then((student) => {
+        setStudents(student);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
   return (
     <div className="home section">
       <div className="final-exams__content"></div>
       <div className="final-exams__cards container">
-        {exam.map((detail) => (
+        {exams.map((exam) => (
           <Exam
-            key={detail.id}
-            image={detail.image}
-            examtitle={detail.examtitle}
-            free={detail.free}
+            key={exam.id}
+            image={exam.image}
+            examtitle={exam.examtitle}
+            free={exam.free}
           />
         ))}
       </div>
@@ -112,7 +127,20 @@ function Home() {
         </div>
       </div>
       <div className="my-students">
-        
+        <div className="my-students__heading">
+          <h3>Tələbələrim</h3>
+        </div>
+        <div className="my-students__cards container">
+          {students.map((student) => (
+            <Students
+              key={student.id}
+              image={student.image}
+              sName={student.sName}
+              university={student.university}
+              point={student.point}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

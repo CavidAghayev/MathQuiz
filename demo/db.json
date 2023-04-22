@@ -28,31 +28,31 @@
   "students":[
     {
       "id": 1,
-      "sName": "",
-      "university": "",
-      "image": "",
-      "point": ""
+      "sName": "Cavid",
+      "university": "UNEC",
+      "image": "https://lh3.googleusercontent.com/9eGSPs0wj8IDizSWa22B5wZK0AKDqHJuaQ6-A5T5_ugxuinRRN9AF8Euv1FX_uzHFW3ccXhFmv9UdSFuoH9ud0Bv08SoTmEGAq1NWkg",
+      "point": "700"
     },
     {
       "id": 2,
-      "sName": "",
-      "university": "",
-      "image": "",
-      "point": ""
+      "sName": "Mehran",
+      "university": "UNEC",
+      "image": "https://lh3.googleusercontent.com/9eGSPs0wj8IDizSWa22B5wZK0AKDqHJuaQ6-A5T5_ugxuinRRN9AF8Euv1FX_uzHFW3ccXhFmv9UdSFuoH9ud0Bv08SoTmEGAq1NWkg",
+      "point": "690"
     },
     {
       "id": 3,
-      "sName": "",
-      "university": "",
-      "image": "",
-      "point": ""
+      "sName": "Amin",
+      "university": "UNEC",
+      "image": "https://lh3.googleusercontent.com/9eGSPs0wj8IDizSWa22B5wZK0AKDqHJuaQ6-A5T5_ugxuinRRN9AF8Euv1FX_uzHFW3ccXhFmv9UdSFuoH9ud0Bv08SoTmEGAq1NWkg",
+      "point": "680"
     },
     {
       "id": 4,
-      "sName": "",
-      "university": "",
-      "image": "",
-      "point": ""
+      "sName": "Ayaz",
+      "university": "UNEC",
+      "image": "https://lh3.googleusercontent.com/9eGSPs0wj8IDizSWa22B5wZK0AKDqHJuaQ6-A5T5_ugxuinRRN9AF8Euv1FX_uzHFW3ccXhFmv9UdSFuoH9ud0Bv08SoTmEGAq1NWkg",
+      "point": "670"
     }
   ]
 }
