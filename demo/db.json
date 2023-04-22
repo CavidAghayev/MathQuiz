@@ -24,5 +24,35 @@
       "examtitle": "9-cu sinif buraxılış",
       "free": "Pulsuz şəkildə başla"
     }
+  ], 
+  "students":[
+    {
+      "id": 1,
+      "sName": "",
+      "university": "",
+      "image": "",
+      "point": ""
+    },
+    {
+      "id": 2,
+      "sName": "",
+      "university": "",
+      "image": "",
+      "point": ""
+    },
+    {
+      "id": 3,
+      "sName": "",
+      "university": "",
+      "image": "",
+      "point": ""
+    },
+    {
+      "id": 4,
+      "sName": "",
+      "university": "",
+      "image": "",
+      "point": ""
+    }
   ]
 }

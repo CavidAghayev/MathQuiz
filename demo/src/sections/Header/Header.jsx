@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../../companents/Button/Button";
 function Header() {
   const navigate = useNavigate();
+
   return (
     <header>
       <div className="header__content container">

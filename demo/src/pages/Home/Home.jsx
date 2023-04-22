@@ -2,7 +2,9 @@ import "./../../pages/Home/Home.css";
 import { useState, useEffect } from "react";
 import Exam from "../../companents/Exam/Exam";
 import Button from "../../companents/Button/Button";
+import { useNavigate } from "react-router-dom";
 function Home() {
+  const navigate = useNavigate();
   const [exam, setExam] = useState([]);
   useEffect(() => {
     fetch("http://localhost:3000/final-exams")
@@ -84,8 +86,9 @@ function Home() {
               <span>Daha çox sınaqlara qatılmaq üçün</span>
               <div className="participate__register__button">
                 <Button
-                size={"md"}
-                color={"secondary"}
+                  onClick={() => navigate("/register")}
+                  size={"md"}
+                  color={"secondary"}
                 >
                   {"Sign up"}
                 </Button>
@@ -94,21 +97,22 @@ function Home() {
             <div className="participate__image"></div>
           </div>
           <div className="why-mathQuiz">
-            <div className="why-mathQuiz__image">
-
-            </div>
+            <div className="why-mathQuiz__image"></div>
             <div className="why-mathQuiz__info">
               <div className="why-mathQuiz__info__heading">
-              <h3>Niyə MathQuiz?</h3>
+                <h3>Niyə MathQuiz?</h3>
               </div>
               <div className="why-mathQuiz__info__text">
-              <span>Online şəkildə imtahan şansı</span>
-              <span>Pulsuz imtahanlara qoşul</span>
-              <span>Giriş edərək daha çox sınaq imkanı</span>
+                <span>Online şəkildə imtahan şansı</span>
+                <span>Pulsuz imtahanlara qoşul</span>
+                <span>Giriş edərək daha çox sınaq imkanı</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="my-students">
+        
       </div>
     </div>
   );
