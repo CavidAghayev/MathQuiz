@@ -4,6 +4,7 @@ import Exam from "../../companents/Exam/Exam";
 import Button from "../../companents/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Students from "../../companents/Student/Student";
+import Footer from "../../sections/Footer/Footer";
 function Home() {
   const navigate = useNavigate();
   const [exams, setExams] = useState([]);
@@ -142,6 +143,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
