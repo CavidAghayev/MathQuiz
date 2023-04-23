@@ -40,7 +40,17 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer__contacts"></div>
+        <div className="footer__contacts">
+          <div className="social">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+          <div className="contact-number">
+            c
+          </div>
+        </div>
       </div>
     </footer>
   );
