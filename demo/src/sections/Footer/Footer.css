@@ -1,0 +1,85 @@
+footer {
+    width: 100%;
+    padding: 50px 0;
+    background: #30333D;
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__mathQuiz-about__heading{
+    margin-bottom: 20px;
+}
+.footer__mathQuiz-about__heading h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #EBB44A;
+}
+
+.footer__mathQuiz-about__info p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.footer__our-exams {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer__our-exams__heading{
+    margin-bottom: 20px;
+}
+.footer__our-exams__heading h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #EBB44A;
+}
+.footer__our-exams__info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.our-exams__links {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.footer__support__heading h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #EBB44A;
+    margin-bottom: 20px;
+
+
+
+}
+
+
+.footer__support__info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.support__links{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+    
