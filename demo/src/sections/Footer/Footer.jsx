@@ -48,7 +48,13 @@ function Footer() {
             <img src="" alt="" />
           </div>
           <div className="contact-number">
-            c
+            <div className="contact-number__info">
+              <h3>Əlaqə Nömrəsi</h3>
+              <span>+994 77 399 99 66</span>
+            </div>
+            <div className="contact-number__image">
+
+            </div>
           </div>
         </div>
       </div>

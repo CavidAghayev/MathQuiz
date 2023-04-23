@@ -82,4 +82,35 @@ footer {
     line-height: 21px;
     color: #FFFFFF;
 }
+
+
+.footer__contacts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-number{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.contact-number__info h3{
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+color: #FFFFFF;
+margin-bottom: 5px;
+}
+
+.contact-number__info span{
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+color: #B4B4B4;
+}
+
+
     
