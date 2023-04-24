@@ -1,10 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
-  name: "counter",
+const initialState = {
+  value: []
+};
+export const studentsSlice = createSlice({
+  name: "student",
   initialState,
-  reducers: {},
+  reducers: {
+    getData: (students) => {
+      students.value = action.payload
+    }
+  },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-export default counterSlice.reducer;
+export const { getDatacd } = getData.studentsSlice.actions

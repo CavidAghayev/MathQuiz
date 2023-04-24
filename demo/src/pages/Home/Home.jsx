@@ -9,7 +9,11 @@ import Clock from "../../assets/images/clock.svg";
 import User from "../../assets/images/user.svg";
 import Crown from "../../assets/images/crown-2.svg";
 import Line from "../../assets/images/Line 1.svg";
+import { useSelector, useDispatch } from 'react-redux'
 function Home() {
+  const data = useSelector((state) => state.students.value)
+  console.log(data);
+  const dispatch = useDispatch()
   const [showExam, setShowExam] = useState(3);
   const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
@@ -21,8 +25,9 @@ function Home() {
     fetch("http://localhost:3000/final-exams")
       .then((response) => response.json())
       .then((exams) => {
-        setExams(exams);
+        dispatch(setExams(exams));
         setExamCount(exams.length);
+        
       })
       .catch((error) => {
         console.log(error.message);
@@ -37,7 +42,7 @@ function Home() {
         setStudentCount(student.length)
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
   }, []);
 
@@ -59,7 +64,35 @@ function Home() {
   }
   return (
     <div className="home section">
-      <div className="final-exams__content"></div>
+      <div className="final-exams__content">
+      <div className="content__items container">
+      <div className="content__info">
+          <h3>9-cu sinif buraxılış riyaziyyat <br /> imtahanı</h3>
+          <span>Pulsuz şəkildə başla</span>
+          <div className="content__info__buttons">
+            <div className="start__button">
+              <Button
+              size={"md"}
+              color={"secondary"}
+              >
+                {"Testə başla"}
+              </Button>
+            </div>
+            <div className="more__button">
+              <Button
+              size={"md"}
+              color={"white"}
+              >
+                {"Daha ətraflı"}
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="content__">
+
+        </div>
+      </div>
+      </div>
       <div className="final-exams__items container">
         <div className="final-exams__cards">
           {exams.map((exam, index) => {
