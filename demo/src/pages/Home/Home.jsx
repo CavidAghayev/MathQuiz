@@ -11,16 +11,18 @@ import Crown from "../../assets/images/crown-2.svg";
 import Line from "../../assets/images/Line 1.svg";
 function Home() {
   const [showExam, setShowExam] = useState(3);
-  const [examCount,setExamCount] = useState(0)
+  const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
   const [exams, setExams] = useState([]);
   const [students, setStudents] = useState([]);
+  const [showStudent, setShowStudent] = useState(3);
+  const [studentCount, setStudentCount] = useState(0)
   useEffect(() => {
     fetch("http://localhost:3000/final-exams")
       .then((response) => response.json())
       .then((exams) => {
         setExams(exams);
-        setExamCount(exams.length)
+        setExamCount(exams.length);
       })
       .catch((error) => {
         console.log(error.message);
@@ -32,6 +34,7 @@ function Home() {
       .then((response) => response.json())
       .then((student) => {
         setStudents(student);
+        setStudentCount(student.length)
       })
       .catch((error) => {
         console.log(error);
@@ -40,11 +43,19 @@ function Home() {
 
   function showExamFunc(e) {
     if (showExam <= examCount - 2) {
-      setShowExam(showExam + 4);g
-    }else {
-      setShowExam(3)
+      setShowExam(showExam + 4);
+    } else {
+      setShowExam(3);
     }
- 
+  }
+
+  function showStudentFunc() {
+    if(showStudent <= studentCount -2){
+      setShowStudent(showStudent + 4)
+    }
+    else{
+      setShowStudent(3)
+    }
   }
   return (
     <div className="home section">
@@ -54,7 +65,7 @@ function Home() {
           {exams.map((exam, index) => {
             if (index <= showExam) {
               return (
-                <Exam
+               <Exam
                   key={exam.id}
                   image={exam.image}
                   examtitle={exam.examtitle}
@@ -65,7 +76,7 @@ function Home() {
           })}
         </div>
         <div className="final-exams__button">
-        <Button
+          <Button
             onClick={(e) => showExamFunc(e)}
             size={"md"}
             color={"primary"}
@@ -164,16 +175,27 @@ function Home() {
         <div className="my-students__heading">
           <h3>Tələbələrim</h3>
         </div>
-        <div className="my-students__cards container">
-          {students.map((student, index) => (
-            <Students
-              key={student.id}
-              image={student.image}
-              sName={student.sName}
-              university={student.university}
-              point={student.point}
-            />
-          ))}
+        <div className="my-students__items container">
+          <div className="my-students__cards">
+            {students.map((student, index) => {
+              if (index <= showStudent) {
+                return (
+                  <Students
+                    key={student.id}
+                    image={student.image}
+                    sName={student.sName}
+                    university={student.university}
+                    point={student.point}
+                  />
+                );
+              }
+            })}
+          </div>
+          <div className="my-students__button">
+            <Button onClick={showStudentFunc} size={"md"} color={"primary"}>
+              {showStudent <= studentCount - 2 ? "Daha çox" : "Gizlət"}
+            </Button>
+          </div>
         </div>
       </div>
       <Footer />
