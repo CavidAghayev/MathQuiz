@@ -40,6 +40,7 @@ function Footer() {
             </div>
           </div>
         </div>
+        <hr />
         <div className="footer__contacts">
           <div className="social">
             <img src="" alt="" />
@@ -47,14 +48,25 @@ function Footer() {
             <img src="" alt="" />
             <img src="" alt="" />
           </div>
+          <div className="footer__contacts__end">
           <div className="contact-number">
             <div className="contact-number__info">
               <h3>Əlaqə Nömrəsi</h3>
               <span>+994 77 399 99 66</span>
             </div>
             <div className="contact-number__image">
-
+              
             </div>
+          </div>
+          <div className="location">
+            <div className="location__info">
+              <h3>Ünvan</h3>
+              <span>N.Nərimanov m/s yaxınlığı</span>
+            </div>
+            <div className="location__image">
+              
+            </div>
+          </div>
           </div>
         </div>
       </div>

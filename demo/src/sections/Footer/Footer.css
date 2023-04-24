@@ -7,6 +7,7 @@ footer {
 .footer__items {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 47px;
 }
 .footer__mathQuiz-about__heading{
     margin-bottom: 20px;
@@ -56,6 +57,7 @@ footer {
     color: #FFFFFF;
 }
 
+
 .footer__support__heading h3{
     font-style: normal;
     font-weight: 700;
@@ -63,9 +65,9 @@ footer {
     line-height: 27px;
     color: #EBB44A;
     margin-bottom: 20px;
+    
 
-
-
+    
 }
 
 
@@ -83,10 +85,16 @@ footer {
     color: #FFFFFF;
 }
 
-
+.footer__contacts__end{
+    display: flex;
+    gap: 50px;
+}
 .footer__contacts{
+    /* padding: 16px 0; */
     display: flex;
     justify-content: space-between;
+    /* border-top: 1px solid #FFFFFF; */
+    margin-top: 16px;
 }
 
 .contact-number{
@@ -106,6 +114,31 @@ margin-bottom: 5px;
 
 .contact-number__info span{
 font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+color: #B4B4B4;
+}
+
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.location__info h3{
+    font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+color: #FFFFFF;
+margin-bottom: 5px;
+}
+
+
+.location__info span{
+    font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 19px;
