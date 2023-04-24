@@ -11,6 +11,7 @@ import Crown from "../../assets/images/crown-2.svg";
 import Line from "../../assets/images/Line 1.svg";
 function Home() {
   const [showExam, setShowExam] = useState(3);
+  const [examCount,setExamCount] = useState(0)
   const navigate = useNavigate();
   const [exams, setExams] = useState([]);
   const [students, setStudents] = useState([]);
@@ -19,6 +20,7 @@ function Home() {
       .then((response) => response.json())
       .then((exams) => {
         setExams(exams);
+        setExamCount(exams.length)
       })
       .catch((error) => {
         console.log(error.message);
@@ -37,10 +39,12 @@ function Home() {
   }, []);
 
   function showExamFunc(e) {
-    setShowExam(showExam + 4);
-    if (showExam === 12) {
-
+    if (showExam <= examCount - 2) {
+      setShowExam(showExam + 4);g
+    }else {
+      setShowExam(3)
     }
+ 
   }
   return (
     <div className="home section">
@@ -61,12 +65,12 @@ function Home() {
           })}
         </div>
         <div className="final-exams__button">
-          <Button
+        <Button
             onClick={(e) => showExamFunc(e)}
             size={"md"}
             color={"primary"}
           >
-            {"Daha çox"}
+            {showExam <= examCount - 2 ? "Daha çox" : "Gizlet"}
           </Button>
         </div>
       </div>
