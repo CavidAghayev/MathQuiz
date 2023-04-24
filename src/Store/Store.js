@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { studentsSlice } from "../Slices/Slice";
+import studentsSlice from "../Store/StudentsSlice";
+
 export const store = configureStore({
   reducer: {
-    getData : studentsSlice
+    students: studentsSlice,
   },
 });
-

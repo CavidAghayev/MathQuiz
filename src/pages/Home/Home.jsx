@@ -9,25 +9,25 @@ import Clock from "../../assets/images/clock.svg";
 import User from "../../assets/images/user.svg";
 import Crown from "../../assets/images/crown-2.svg";
 import Line from "../../assets/images/Line 1.svg";
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
+import { setStudents } from "../../Store/StudentsSlice";
+
 function Home() {
-  const data = useSelector((state) => state.students.value)
-  console.log(data);
-  const dispatch = useDispatch()
   const [showExam, setShowExam] = useState(3);
   const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
   const [exams, setExams] = useState([]);
-  const [students, setStudents] = useState([]);
   const [showStudent, setShowStudent] = useState(3);
-  const [studentCount, setStudentCount] = useState(0)
+  const [studentCount, setStudentCount] = useState(0);
+  const students = useSelector(state => state.students.students)
+  const dispatch = useDispatch();
+
   useEffect(() => {
     fetch("http://localhost:3000/final-exams")
       .then((response) => response.json())
       .then((exams) => {
-        dispatch(setExams(exams));
+        setExams(exams);
         setExamCount(exams.length);
-        
       })
       .catch((error) => {
         console.log(error.message);
@@ -37,9 +37,9 @@ function Home() {
   useEffect(() => {
     fetch("http://localhost:3000/students")
       .then((response) => response.json())
-      .then((student) => {
-        setStudents(student);
-        setStudentCount(student.length)
+      .then((students) => {
+        dispatch(setStudents(students));
+        setStudentCount(students.length);
       })
       .catch((error) => {
         console.log(error.message);
@@ -55,50 +55,43 @@ function Home() {
   }
 
   function showStudentFunc() {
-    if(showStudent <= studentCount -2){
-      setShowStudent(showStudent + 4)
-    }
-    else{
-      setShowStudent(3)
+    if (showStudent <= studentCount - 2) {
+      setShowStudent(showStudent + 4);
+    } else {
+      setShowStudent(3);
     }
   }
   return (
     <div className="home section">
       <div className="final-exams__content">
-      <div className="content__items container">
-      <div className="content__info">
-          <h3>9-cu sinif buraxılış riyaziyyat <br /> imtahanı</h3>
-          <span>Pulsuz şəkildə başla</span>
-          <div className="content__info__buttons">
-            <div className="start__button">
-              <Button
-              size={"md"}
-              color={"secondary"}
-              >
-                {"Testə başla"}
-              </Button>
-            </div>
-            <div className="more__button">
-              <Button
-              size={"md"}
-              color={"white"}
-              >
-                {"Daha ətraflı"}
-              </Button>
+        <div className="content__items container">
+          <div className="content__info">
+            <h3>
+              9-cu sinif buraxılış riyaziyyat <br /> imtahanı
+            </h3>
+            <span>Pulsuz şəkildə başla</span>
+            <div className="content__info__buttons">
+              <div className="start__button">
+                <Button size={"md"} color={"secondary"}>
+                  {"Testə başla"}
+                </Button>
+              </div>
+              <div className="more__button">
+                <Button size={"md"} color={"white"}>
+                  {"Daha ətraflı"}
+                </Button>
+              </div>
             </div>
           </div>
+          <div className="content__"></div>
         </div>
-        <div className="content__">
-
-        </div>
-      </div>
       </div>
       <div className="final-exams__items container">
         <div className="final-exams__cards">
           {exams.map((exam, index) => {
             if (index <= showExam) {
               return (
-               <Exam
+                <Exam
                   key={exam.id}
                   image={exam.image}
                   examtitle={exam.examtitle}
