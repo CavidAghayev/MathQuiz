@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Header from "./sections/Header/Header";
 import Register from "./pages/Register/Register";
 function App() {
+  console.log(0);
+
   return (
     <>
       <Router>

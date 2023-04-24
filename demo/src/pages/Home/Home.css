@@ -62,12 +62,17 @@
 
 .entered-exam__icons {
     margin-bottom: 26px;
+    display: flex;
+    gap: 16px;
 }
 
 .entered-exam__info {
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+}
+
+.info__content:nth-child(2){
+    margin-left: 90px;
+    margin-right: 130px;
 }
 
 .info__content {
@@ -80,7 +85,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 21px;
     color: #8A7E7E;
 }
 

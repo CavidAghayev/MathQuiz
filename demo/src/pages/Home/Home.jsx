@@ -5,6 +5,10 @@ import Button from "../../companents/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Students from "../../companents/Student/Student";
 import Footer from "../../sections/Footer/Footer";
+import Clock from '../../assets/images/clock.svg'
+import User from '../../assets/images/user.svg'
+import Crown from '../../assets/images/crown-2.svg'
+import Line from '../../assets/images/Line 1.svg'
 function Home() {
   const navigate = useNavigate();
   const [exams, setExams] = useState([]);
@@ -55,9 +59,11 @@ function Home() {
             </p>
           </div>
           <div className="entered-exam__icons">
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
+            <img src={User} alt="" />
+            <img src={Line} alt="" />
+            <img src={Clock} alt="" />
+            <img src={Line} alt="" />
+            <img src={Crown} alt="" />
           </div>
           <div className="entered-exam__info">
             <div className="info__content">
