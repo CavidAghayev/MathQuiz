@@ -5,11 +5,12 @@ import Button from "../../companents/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Students from "../../companents/Student/Student";
 import Footer from "../../sections/Footer/Footer";
-import Clock from '../../assets/images/clock.svg'
-import User from '../../assets/images/user.svg'
-import Crown from '../../assets/images/crown-2.svg'
-import Line from '../../assets/images/Line 1.svg'
+import Clock from "../../assets/images/clock.svg";
+import User from "../../assets/images/user.svg";
+import Crown from "../../assets/images/crown-2.svg";
+import Line from "../../assets/images/Line 1.svg";
 function Home() {
+  const [showExam, setShowExam] = useState(3);
   const navigate = useNavigate();
   const [exams, setExams] = useState([]);
   const [students, setStudents] = useState([]);
@@ -34,18 +35,40 @@ function Home() {
         console.log(error);
       });
   }, []);
+
+  function showExamFunc(e) {
+    setShowExam(showExam + 4);
+    if (showExam === 12) {
+
+    }
+  }
   return (
     <div className="home section">
       <div className="final-exams__content"></div>
-      <div className="final-exams__cards container">
-        {exams.map((exam) => (
-          <Exam
-            key={exam.id}
-            image={exam.image}
-            examtitle={exam.examtitle}
-            free={exam.free}
-          />
-        ))}
+      <div className="final-exams__items container">
+        <div className="final-exams__cards">
+          {exams.map((exam, index) => {
+            if (index <= showExam) {
+              return (
+                <Exam
+                  key={exam.id}
+                  image={exam.image}
+                  examtitle={exam.examtitle}
+                  free={exam.free}
+                />
+              );
+            }
+          })}
+        </div>
+        <div className="final-exams__button">
+          <Button
+            onClick={(e) => showExamFunc(e)}
+            size={"md"}
+            color={"primary"}
+          >
+            {"Daha çox"}
+          </Button>
+        </div>
       </div>
       <div className="entered-exam">
         <div className="entered-exam__content container">
@@ -138,7 +161,7 @@ function Home() {
           <h3>Tələbələrim</h3>
         </div>
         <div className="my-students__cards container">
-          {students.map((student) => (
+          {students.map((student, index) => (
             <Students
               key={student.id}
               image={student.image}
@@ -149,7 +172,7 @@ function Home() {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
