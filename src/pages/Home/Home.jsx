@@ -11,48 +11,74 @@ import Crown from "../../assets/images/crown-2.svg";
 import Line from "../../assets/images/Line 1.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { setStudents } from "../../Store/StudentsSlice";
+import { contentfulClient } from "../../libs/contentul";
+import { setExams } from '../../Store/ExamsSLice' 
 
 function Home() {
   const [showExam, setShowExam] = useState(3);
   const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
-  const [exams, setExams] = useState([]);
+  // const [exams, setExams] = useState([]);
+  // const [students, setStudents] = useState([]);
   const [showStudent, setShowStudent] = useState(3);
   const [studentCount, setStudentCount] = useState(0);
-  const students = useSelector(state => state.students.students)
+  const students = useSelector((state) => state.students.students);
+  const exams = useSelector((state) => state.exams.exams)
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    fetch("http://localhost:3000/final-exams")
-      .then((response) => response.json())
-      .then((exams) => {
-        setExams(exams);
-        setExamCount(exams.length);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/users")
+  //     .then((response) => response.json())
+  //     .then((exams) => {
+  //       // setExams(exams);
+  //       // setExamCount(exams.length);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.message);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch("https://dummyjson.com/users")
+  //     .then((response) => response.json())
+  //     .then((res) => {
+  //       dispatch(setStudents(res.users));
+  //       setStudentCount(res.users.length);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.message);
+  //     });
+  // }, []);
+
+
+
+
+  useEffect(()=>{
+    contentfulClient.getEntries({content_type: "exam"})
+    .then((data) => {
+      dispatch(setExams(data))
+    })
+    .catch((error) => console.log(error.message))
+  },[]);
+  console.log(exams);
+
 
   useEffect(() => {
-    fetch("http://localhost:3000/students")
-      .then((response) => response.json())
-      .then((students) => {
-        dispatch(setStudents(students));
-        setStudentCount(students.length);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    contentfulClient.getEntries({ content_type: "student" })
+    .then((data) => {
+      dispatch(setStudents(data))
+    })
+    .catch((error)=> console.log(error.message))
   }, []);
-
-  function showExamFunc(e) {
-    if (showExam <= examCount - 2) {
-      setShowExam(showExam + 4);
-    } else {
-      setShowExam(3);
-    }
-  }
+  console.log(students);
+  
+  // function showExamFunc(e) {
+  //   if (showExam <= examCount - 2) {
+  //     setShowExam(showExam + 4);
+  //   } else {
+  //     setShowExam(3);
+  //   }
+  // }
 
   function showStudentFunc() {
     if (showStudent <= studentCount - 2) {
@@ -88,14 +114,14 @@ function Home() {
       </div>
       <div className="final-exams__items container">
         <div className="final-exams__cards">
-          {exams.map((exam, index) => {
+          {exams?.items?.map((exam, index) => {
             if (index <= showExam) {
               return (
                 <Exam
-                  key={exam.id}
-                  image={exam.image}
-                  examtitle={exam.examtitle}
-                  free={exam.free}
+                  key={exam.fields.id}
+                  image={exam.fields.image.fields.file.url}
+                  examtitle={exam.fields.title}
+                  free={exam.fields.text}
                 />
               );
             }
@@ -103,7 +129,7 @@ function Home() {
         </div>
         <div className="final-exams__button">
           <Button
-            onClick={(e) => showExamFunc(e)}
+            // onClick={(e) => showExamFunc(e)}
             size={"md"}
             color={"primary"}
           >
@@ -203,22 +229,25 @@ function Home() {
         </div>
         <div className="my-students__items container">
           <div className="my-students__cards">
-            {students.map((student, index) => {
+            {students?.items?.map((student, index) => {
               if (index <= showStudent) {
-                return (
-                  <Students
-                    key={student.id}
-                    image={student.image}
-                    sName={student.sName}
-                    university={student.university}
-                    point={student.point}
-                  />
-                );
-              }
+              return (
+                <Students
+                  key={student.fields.id}
+                  image={student.fields.image.fields.file.url}
+                  sName={student.fields.name}
+                  university={student.fields.university}
+                  point={student.fields.points}
+                />
+              )};
             })}
           </div>
           <div className="my-students__button">
-            <Button onClick={showStudentFunc} size={"md"} color={"primary"}>
+            <Button
+              onClick={showStudentFunc}
+              size={"md"}
+              color={"primary"}
+            >
               {showStudent <= studentCount - 2 ? "Daha çox" : "Gizlət"}
             </Button>
           </div>

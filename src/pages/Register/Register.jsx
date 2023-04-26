@@ -27,14 +27,14 @@ function Register() {
                 <h3>I am a</h3>
               </div>
               <div className="options">
-                <div className="student">
-                  <div className="student__checkbox">
+                <div className="options__student">
+                  <div className="options__student__checkbox">
                     <Input type={"checkbox"} size={"sm"} />
                   </div>
                   <span>Student</span>
                 </div>
-                <div className="teacher">
-                  <div className="teacher__checkbox">
+                <div className="options__teacher">
+                  <div className="options__teacher__checkbox">
                     <Input type={"checkbox"} size={"sm"} />
                   </div>
                   <span>Teacher</span>

@@ -67,16 +67,16 @@
     gap: 36px;
 }
 
-.student {
+.options__student {
     display: flex;
     gap: 12px;
 }
 
-.student__checkbox {
+.options__student__checkbox {
     width: 23px;
 }
 
-.student span {
+.options__student span {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -84,16 +84,16 @@
     color: #2B2A2A;
 }
 
-.teacher {
+.options__teacher {
     display: flex;
     gap: 12px;
 }
 
-.teacher__checkbox {
+.options__teacher__checkbox {
     width: 23px;
 }
 
-.teacher span {
+.options__teacher span {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;

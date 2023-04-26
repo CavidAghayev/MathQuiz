@@ -9,7 +9,7 @@ header {
     left: 0;
     right: 0;
     background-color: #FFFFFF;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .header__content {
