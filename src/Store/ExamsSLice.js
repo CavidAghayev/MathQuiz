@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    exams: []
+    exams: [],
 }
 
 export const examsSlice = createSlice({

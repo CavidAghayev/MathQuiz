@@ -53,16 +53,16 @@ function Home() {
 
 
 
+  // console.log(exams);
+  
   useEffect(()=>{
     contentfulClient.getEntries({content_type: "exam"})
     .then((data) => {
-      dispatch(setExams(data))
+     dispatch(setExams(data))
     })
     .catch((error) => console.log(error.message))
-  },[]);
-  console.log(exams);
-
-
+  });
+  
   useEffect(() => {
     contentfulClient.getEntries({ content_type: "student" })
     .then((data) => {
@@ -70,7 +70,6 @@ function Home() {
     })
     .catch((error)=> console.log(error.message))
   }, []);
-  console.log(students);
   
   // function showExamFunc(e) {
   //   if (showExam <= examCount - 2) {
