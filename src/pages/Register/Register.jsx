@@ -3,10 +3,11 @@ import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Eye from '../../assets/images/eye.svg'
 function Register() {
   const [formData, setFormData] = useState({});
   let inputId = document.getElementById("password");
-  function checkboxItem() {
+  function showPassword() {
     if (inputId.type === "password") {
       inputId.type = "text";
     } else {
@@ -63,6 +64,8 @@ function Register() {
                   type="email"
                   text="Email"
                 />
+                <div className="register__board__input__password">
+                <img onClick={()=>showPassword()} src={Eye} alt="" />
                 <Input
                   value={formData.password}
                   onChange={(e) => {
@@ -73,6 +76,7 @@ function Register() {
                   type="password"
                   text="Password"
                 />
+                </div>
               </form>
               <div className="input__icon"></div>
               <div className="forgot__password">
@@ -84,7 +88,6 @@ function Register() {
             <div className="register__board__privacy-policy">
               <div className="checkbox">
                 <Input
-                  onClick={() => checkboxItem()}
                   size={"sm"}
                   type={"checkbox"}
                 />

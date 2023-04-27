@@ -59,6 +59,17 @@
     margin-bottom: 20px;
 }
 
+.login__board__input__password{
+    width: 100%;
+    position: relative;
+}
+.login__board__input__password img{
+position: absolute;
+bottom: 50%;
+right: 0;
+transform: translate(-50%,100%);
+cursor: pointer;
+}
 .form .input {
     margin-bottom: 15px;
 }

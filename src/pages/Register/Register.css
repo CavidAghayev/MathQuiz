@@ -47,6 +47,18 @@
     margin-bottom: 7px;
 }
 
+.register__board__input__password{
+    width: 100%;
+    position: relative;
+}
+.register__board__input__password img{
+    position: absolute;
+bottom: 50%;
+right: 0;
+transform: translate(-50%,100%);
+cursor: pointer;
+}
+
 .who-are-you {
     display: flex;
     flex-direction: column;
