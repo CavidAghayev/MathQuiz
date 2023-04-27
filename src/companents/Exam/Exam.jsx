@@ -1,6 +1,9 @@
 import "../Exam/Exam.css";
 import Button from "../Button/Button";
-function Exam({ image, examtitle, free }) {
+import { useNavigate } from "react-router-dom";
+
+function Exam({ image, examtitle, free  }) {
+  const navigate = useNavigate()
   return (
     <div className="exam">
       <div className="exam__image">
@@ -14,7 +17,8 @@ function Exam({ image, examtitle, free }) {
         <Button size={"sm"} color={"primary"}>
           {"Testə başla"}
         </Button>
-        <Button size={"sm"} color={"white"}>
+        <Button onClick={()=> navigate(`/examDetails`)} 
+        size={"sm"} color={"white"}>
           {"Daha ətraflı"}
         </Button>
       </div>

@@ -4,6 +4,7 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Header from "./sections/Header/Header";
 import Register from "./pages/Register/Register";
+import ExamDetails from "./pages/ExamDetails";
 function App() {
   console.log(0);
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path='/examDetails/:id' element={<ExamDetails/>}/>
         </Routes>
       </Router>
     </>
