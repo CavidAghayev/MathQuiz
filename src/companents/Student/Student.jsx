@@ -1,7 +1,9 @@
 import "./Student.css";
-function Student({ sName, image, university, point }) {
+import { useNavigate } from "react-router-dom";
+function Student({ sName, image, university, point, student}) {
+  const navigate = useNavigate();
   return (
-    <div className="student">
+    <div onClick={()=>navigate(`/studentDetails/${student.fields.id}`)} className="student">
       <div className="student__image">
         <img src={image} alt="" />
       </div>

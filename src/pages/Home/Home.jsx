@@ -25,7 +25,6 @@ function Home() {
   const students = useSelector((state) => state.students.students);
   const exams = useSelector((state) => state.exams.exams)
   const dispatch = useDispatch();
-
   // useEffect(() => {
   //   fetch("https://dummyjson.com/users")
   //     .then((response) => response.json())
@@ -233,6 +232,7 @@ function Home() {
               return (
                 <Students
                   key={student.fields.id}
+                  student={student}
                   image={student.fields.image.fields.file.url}
                   sName={student.fields.name}
                   university={student.fields.university}
