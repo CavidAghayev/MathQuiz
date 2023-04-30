@@ -55,7 +55,7 @@ function Home() {
   // console.log(exams);
   
   useEffect(()=>{
-    contentfulClient.getEntries({content_type: "exam"})
+    contentfulClient.getEntries({content_type: "exam", "order":"-sys.createdAt"})
     .then((data) => {
      dispatch(setExams(data))
     })
@@ -63,7 +63,7 @@ function Home() {
   });
   
   useEffect(() => {
-    contentfulClient.getEntries({ content_type: "student" })
+    contentfulClient.getEntries({ content_type: "student", "order":"-sys.createdAt" })
     .then((data) => {
       dispatch(setStudents(data))
     })
@@ -116,7 +116,8 @@ function Home() {
             if (index <= showExam) {
               return (
                 <Exam
-                  key={exam.fields.id}
+                  key={exam.sys.id}
+                  exam={exam}
                   image={exam.fields.image.fields.file.url}
                   examtitle={exam.fields.title}
                   free={exam.fields.text}
@@ -231,7 +232,7 @@ function Home() {
               if (index <= showStudent) {
               return (
                 <Students
-                  key={student.fields.id}
+                  key={student.sys.id}
                   student={student}
                   image={student.fields.image.fields.file.url}
                   sName={student.fields.name}

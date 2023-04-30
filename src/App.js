@@ -4,7 +4,8 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Header from "./sections/Header/Header";
 import Register from "./pages/Register/Register";
-import StudentsDetails from "./pages/StudentsDetails/StudentsDetails";
+import ExamDetails from "./pages/ExamDetails/ExamDetails";
+import { Exams } from "./pages/Exams/Exams";
 function App() {
   return (
     <>
@@ -14,7 +15,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/studentDetails/:id" element={<StudentsDetails />}/>
+          <Route path="/examDetails/:id" element={<ExamDetails />}/>
+          <Route path="/exams" element={<Exams />}/>
         </Routes>
       </Router>
     </>

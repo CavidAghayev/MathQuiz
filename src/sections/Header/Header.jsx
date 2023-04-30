@@ -11,7 +11,7 @@ function Header() {
           <span onClick={() => navigate("/")}>MathQuiz</span>
         </div>
         <div className="header__routes">
-          <NavLink to="" className="header__routes__exam">
+          <NavLink to={"/exams"} className="header__routes__exam">
             İmtahanlar
           </NavLink>
           <NavLink to="" className="header__routes__online-videos">

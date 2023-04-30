@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Student({ sName, image, university, point, student}) {
   const navigate = useNavigate();
   return (
-    <div onClick={()=>navigate(`/studentDetails/${student.fields.id}`)} className="student">
+    <div onClick={()=>navigate(`/studentDetails/${student.sys.id}`)} className="student">
       <div className="student__image">
         <img src={image} alt="" />
       </div>
@@ -12,7 +12,7 @@ function Student({ sName, image, university, point, student}) {
         <span>{`${"Universitet:"} ${university}`}</span>
         <span>{`${"Bal:"} ${point}`}</span>
       </div>
-    </div>
+    </div>  
   );
 }
 
