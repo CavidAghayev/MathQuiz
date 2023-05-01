@@ -4,6 +4,7 @@ import Button from "../../companents/Button/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Eye from '../../assets/images/eye.svg'
+import Header from "../../sections/Header/Header";
 function Login() {
   const [formData, setFormData] = useState({});
   let inputId = document.getElementById("password");
@@ -15,6 +16,8 @@ function Login() {
     }
   }
   return (
+    <>
+    <Header/>
     <div className="login section">
       <div className="login__content">
         <div className="login__details">
@@ -46,7 +49,7 @@ function Login() {
                   id="password"
                   type="password"
                   text="Password"
-                />
+                  />
                 </div>
               </form>
               <div className="input__icon"></div>
@@ -61,7 +64,7 @@ function Login() {
                 <Input
                   size={"sm"}
                   type={"checkbox"}
-                />
+                  />
               </div>
               <div className="privacy-policy__text">
                 <p>I accept (name) and Terms of Services</p>
@@ -80,6 +83,7 @@ function Login() {
         <div className="login__exam-tests"></div>
       </div>
     </div>
+                  </>
   );
 }
 

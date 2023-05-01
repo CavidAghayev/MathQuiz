@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 
-.student__image {
+.image {
     background: #675AF0;
     height: 120px;
     border-top-left-radius: 10px;
@@ -31,7 +31,7 @@
     z-index: 9999;
 }
 
-.student__info {
+.info {
     height: 249px;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     margin-left: 20px;
 }
 
-.student__info h3 {
+.info h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -48,7 +48,7 @@
     color: #2B2A2A;
 }
 
-.student__info span {
+.info span {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;

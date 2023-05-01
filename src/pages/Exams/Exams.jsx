@@ -1,8 +1,9 @@
-import '../Exams/Exams.css'
+import styles from '../Exams/Exams.module.css'
+import { PanelList } from '../../sections/PanelList/PanelList'
 export const Exams = () => {
   return (
-    <div className="exams section">
-      
+    <div className={styles.exams}>
+      <PanelList />
     </div>
   )
 }

@@ -7,24 +7,24 @@
     cursor: pointer;
 }
 
-.exam__image {
+.image {
     width: 148px;
     height: 98px;
     margin: 0 auto;
     margin-bottom: 16px;
 }
 
-.exam__image img {
+.image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.exam__info {
+.info {
     margin-bottom: 33px;
 }
 
-.exam__info h3 {
+.info h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -33,7 +33,7 @@
     margin-bottom: 5px;
 }
 
-.exam__info span {
+.info span {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -41,7 +41,7 @@
     color: #8A7E7E;
 }
 
-.exam__buttons {
+.buttons {
     display: flex;
     gap: 9px;
 }

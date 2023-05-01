@@ -1,4 +1,4 @@
-import "./../../pages/Home/Home.css";
+import styles from '../Home/Home.module.css'
 import { useState, useEffect } from "react";
 import Exam from "../../companents/Exam/Exam";
 import Button from "../../companents/Button/Button";
@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setStudents } from "../../Store/StudentsSlice";
 import { contentfulClient } from "../../libs/contentul";
 import { setExams } from '../../Store/ExamsSLice' 
+import Header from "../../sections/Header/Header";
 
 function Home() {
   const [showExam, setShowExam] = useState(3);
@@ -86,7 +87,9 @@ function Home() {
     }
   }
   return (
-    <div className="home section">
+    <>
+    <Header/>
+    <div style={{marginTop: 90}} className="home section">
       <div className="final-exams__content">
         <div className="content__items container">
           <div className="content__info">
@@ -121,9 +124,9 @@ function Home() {
                   image={exam.fields.image.fields.file.url}
                   examtitle={exam.fields.title}
                   free={exam.fields.text}
-                />
-              );
-            }
+                  />
+                  );
+                }
           })}
         </div>
         <div className="final-exams__button">
@@ -131,7 +134,7 @@ function Home() {
             // onClick={(e) => showExamFunc(e)}
             size={"md"}
             color={"primary"}
-          >
+            >
             {showExam <= examCount - 2 ? "Daha çox" : "Gizlet"}
           </Button>
         </div>
@@ -230,7 +233,7 @@ function Home() {
           <div className="my-students__cards">
             {students?.items?.map((student, index) => {
               if (index <= showStudent) {
-              return (
+                return (
                 <Students
                   key={student.sys.id}
                   student={student}
@@ -238,9 +241,9 @@ function Home() {
                   sName={student.fields.name}
                   university={student.fields.university}
                   point={student.fields.points}
-                />
-              )};
-            })}
+                  />
+                  )};
+                })}
           </div>
           <div className="my-students__button">
             <Button
@@ -255,6 +258,7 @@ function Home() {
       </div>
       <Footer />
     </div>
+              </>
   );
 }
 

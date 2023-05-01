@@ -4,6 +4,7 @@ import Button from "../../companents/Button/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Eye from '../../assets/images/eye.svg'
+import Header from "../../sections/Header/Header";
 function Register() {
   const [formData, setFormData] = useState({});
   let inputId = document.getElementById("password");
@@ -15,6 +16,8 @@ function Register() {
     }
   }
   return (
+    <>
+    <Header/>
     <div className="register section">
       <div className="register__content">
         <div className="register__exam-tests"></div>
@@ -53,7 +56,7 @@ function Register() {
                   id="date"
                   type="date"
                   text="Date of birth"
-                />
+                  />
                 <Input
                   value={formData.email}
                   onChange={(e) => {
@@ -63,7 +66,7 @@ function Register() {
                   id="email"
                   type="email"
                   text="Email"
-                />
+                  />
                 <div className="register__board__input__password">
                 <img onClick={()=>showPassword()} src={Eye} alt="" />
                 <Input
@@ -75,7 +78,7 @@ function Register() {
                   id="password"
                   type="password"
                   text="Password"
-                />
+                  />
                 </div>
               </form>
               <div className="input__icon"></div>
@@ -116,6 +119,7 @@ function Register() {
         </div>
       </div>
     </div>
+                  </>
   );
 }
 
