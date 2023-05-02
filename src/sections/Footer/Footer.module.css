@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1072px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 footer {
     width: 100%;
     padding: 50px 0;
@@ -10,11 +29,11 @@ footer {
     margin-bottom: 47px;
 }
 
-.footer__mathQuiz-about__heading {
+.mathQuiz-about__heading {
     margin-bottom: 20px;
 }
 
-.footer__mathQuiz-about__heading h3 {
+.mathQuiz-about__heading h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -22,7 +41,7 @@ footer {
     color: #EBB44A;
 }
 
-.footer__mathQuiz-about__info p {
+.mathQuiz-about__info p {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -30,17 +49,17 @@ footer {
     color: #FFFFFF;
 }
 
-.footer__our-exams {
+.our-exams {
     display: flex;
     flex-direction: column;
 }
 
 
-.footer__our-exams__heading {
+.exams__heading {
     margin-bottom: 20px;
 }
 
-.footer__our-exams__heading h3 {
+.exams__heading h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -48,13 +67,13 @@ footer {
     color: #EBB44A;
 }
 
-.footer__our-exams__info {
+.exams__info {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.our-exams__links {
+.exam__info__links {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -63,7 +82,7 @@ footer {
 }
 
 
-.footer__support__heading h3 {
+.support__heading h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -76,13 +95,13 @@ footer {
 }
 
 
-.footer__support__info {
+.support__info {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.support__links {
+.support__info__links {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -90,12 +109,12 @@ footer {
     color: #FFFFFF;
 }
 
-.footer__contacts__end {
+.contacts__end {
     display: flex;
     gap: 50px;
 }
 
-.footer__contacts {
+.contacts {
     /* padding: 16px 0; */
     display: flex;
     justify-content: space-between;

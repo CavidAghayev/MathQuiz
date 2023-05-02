@@ -19,15 +19,15 @@ function Login() {
     <>
     <Header/>
     <div style={{marginTop: 90}} className={styles.login}>
-      <div className={styles.content}>
+      <div className={styles["login__content"]}>
         <div className={styles["login__details"]}>
           <div className={styles.board}>
-            <div className={styles.heading}>
+            <div className={styles["board__heading"]}>
               <h4>Login</h4>
               <span>Welcome back! Please enter your details.</span>
             </div>
-            <div className="login__board__form">
-              <form action="" className="form">
+            <div className={styles["board__form"]}>
+              <form action="" className={styles.form}>
                 <Input
                   value={formData.email}
                   onChange={(e) =>
@@ -38,7 +38,7 @@ function Login() {
                   type="email"
                   text="Email"
                 />
-                <div className="login__board__input__password">
+                <div className={styles["input-password"]}>
                   <img onClick={()=>showPassword()} src={Eye} alt="" />
                 <Input
                   value={formData.password}
@@ -52,35 +52,34 @@ function Login() {
                   />
                 </div>
               </form>
-              <div className="input__icon"></div>
-              <div className="forgot__password">
-                <Link className="forgot__password__link" to="">
+              <div className={styles["forgot-password"]}>
+                <Link className={styles["forgot-password__link"]} to="">
                   Forgot password?
                 </Link>
               </div>
             </div>
-            <div className="login__board__privacy-policy">
-              <div className="checkbox">
+            <div className={styles["privacy-policy"]}>
+              <div className={styles.checkbox}>
                 <Input
                   size={"sm"}
                   type={"checkbox"}
                   />
               </div>
-              <div className="privacy-policy__text">
+              <div className={styles["privacy-policy__text"]}>
                 <p>I accept (name) and Terms of Services</p>
-                <Link className="privacy-policy__link" to="">
+                <Link className={styles["privacy-policy__link"]} to="">
                   Privacy Policy
                 </Link>
               </div>
             </div>
-            <div className="login__board__button">
+            <div className={styles["board__btn"]}>
               <Button size={"lg"} color={"primary"}>
                 {"Login"}
               </Button>
             </div>
           </div>
         </div>
-        <div className="login__exam-tests"></div>
+        <div className={styles["exam-tests"]}></div>
       </div>
     </div>
                   </>

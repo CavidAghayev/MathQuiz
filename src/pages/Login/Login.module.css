@@ -1,9 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1072px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .login {
     width: 100%;
     padding: 82px 53px;
 }
 
-.content {
+.login__content {
     background: #F5F5FF;
     border-radius: 35px;
     display: flex;
@@ -23,7 +41,7 @@
 
 }
 
-.login__exam-tests {
+.exam-tests {
     width: 50%;
     background-image: url('./../../assets/images/OM6UUZ0\ 1.svg');
     background-position: center;
@@ -33,11 +51,11 @@
     border-bottom-right-radius: 20px;
 }
 
-.login__board__heading {
+.board__heading {
     margin-bottom: 55px;
 }
 
-.login__board__heading h4 {
+.board__heading h4 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -47,7 +65,7 @@
     margin-bottom: 7px;
 }
 
-.login__board__heading span {
+.board__heading span {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -55,33 +73,29 @@
     color: #8A7E7E;
 }
 
-.login__board__form {
+.board__form {
     margin-bottom: 20px;
 }
 
-.login__board__input__password{
+.input-password{
     width: 100%;
     position: relative;
 }
-.login__board__input__password img{
+.input-password img{
 position: absolute;
 bottom: 50%;
 right: 0;
 transform: translate(-50%,100%);
 cursor: pointer;
 }
-.form .input {
-    margin-bottom: 15px;
-}
 
-
-.forgot__password {
+.forgot-password {
     display: flex;
     justify-content: flex-end;
     margin-top: 6px;
 }
 
-.forgot__password__link {
+.forgot-password__link {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -93,7 +107,7 @@ cursor: pointer;
     width: 23px;
 }
 
-.login__board__privacy-policy {
+.privacy-policy {
     display: flex;
     align-items: center;
     gap: 12px;

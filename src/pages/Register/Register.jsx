@@ -1,4 +1,4 @@
-import "../Register/Register.css";
+import styles from '../Register/Register.module.css'
 import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
 import { Link } from "react-router-dom";
@@ -18,35 +18,36 @@ function Register() {
   return (
     <>
     <Header/>
-    <div className="register section">
-      <div className="register__content">
-        <div className="register__exam-tests"></div>
-        <div className="register__details">
-          <div className="register__board">
-            <div className="register__board__heading">
+    <div style={{marginTop: 90}} className={styles.register}>
+      <div className={styles["register__content"]}>
+        <div className={styles["exam-tests"]}></div>
+        <div className={styles["register__details"]}>
+          <div className={styles.board}>
+            <div className={styles["board__heading"]}>
               <h4>Create new account</h4>
             </div>
-            <div className="who-are-you">
-              <div className="who-are-you__heading">
+            <div className={styles["who-are-you"]}>
+              <div className={styles["who-are-you__heading"]}>
                 <h3>I am a</h3>
               </div>
-              <div className="options">
-                <div className="options__student">
-                  <div className="options__student__checkbox">
+              <div className={styles.options}>
+                <div className={styles["options__student"]}>
+                  <div className={styles["student__checkbox"]}>
                     <Input type={"checkbox"} size={"sm"} />
                   </div>
                   <span>Student</span>
                 </div>
-                <div className="options__teacher">
-                  <div className="options__teacher__checkbox">
+                <div className={styles["options__teacher"]}>
+                  <div className={styles["teacher__checkbox"]}>
                     <Input type={"checkbox"} size={"sm"} />
                   </div>
                   <span>Teacher</span>
                 </div>
               </div>
             </div>
-            <div className="register__board__form">
-              <form action="" className="form">
+            <div className={styles["board-form"]}>
+              <form action="" className={styles.form}>
+                <div className={styles["input-date"]}>
                 <Input
                   value={formData.date}
                   onChange={(e) =>
@@ -57,6 +58,8 @@ function Register() {
                   type="date"
                   text="Date of birth"
                   />
+                </div>
+                  <div className={styles["input-email"]}>
                 <Input
                   value={formData.email}
                   onChange={(e) => {
@@ -67,8 +70,9 @@ function Register() {
                   type="email"
                   text="Email"
                   />
-                <div className="register__board__input__password">
-                <img onClick={()=>showPassword()} src={Eye} alt="" />
+                  </div>
+                <div className={styles["input-password"]}>
+                <img onClick={()=>showPassword()} src={Eye} alt="" /> 
                 <Input
                   value={formData.password}
                   onChange={(e) => {
@@ -81,36 +85,36 @@ function Register() {
                   />
                 </div>
               </form>
-              <div className="input__icon"></div>
-              <div className="forgot__password">
-                <Link className="forgot__password__link" to="">
+              <div className={styles["input-icon"]}></div>
+              <div className={styles["forgot-password"]}>
+                <Link className={styles["forgot-password__link"]} to="">
                   Forgot password
                 </Link>
               </div>
             </div>
-            <div className="register__board__privacy-policy">
-              <div className="checkbox">
+            <div className={styles["privacy-policy"]}>
+              <div className={styles.checkbox}>
                 <Input
                   size={"sm"}
                   type={"checkbox"}
                 />
               </div>
-              <div className="privacy-policy__text">
+              <div className={styles["privacy-policy__text"]}>
                 <p>I accept (name) and Terms of Services</p>
-                <Link className="privacy-policy__link" to="">
+                <Link className={styles["privacy-policy__link"]} to="">
                   Privacy Policy
                 </Link>
               </div>
             </div>
-            <div className="register__board__button">
+            <div className={styles["board__btn"]}>
               <Button size={"lg"} color={"primary"}>
                 {"Sign Up"}
               </Button>
             </div>
-            <div className="register__or">
+            <div className={styles.or}>
               <span>or</span>
             </div>
-            <div className="google-continue">
+            <div className={styles["google-continue"]}>
               <Button size={"lg"} color={"white__shadow"}>
                 {"Continue with Google"}
               </Button>

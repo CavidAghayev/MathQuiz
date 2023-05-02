@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1072px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .register {
     width: 100%;
     padding: 82px 53px;
@@ -23,7 +41,7 @@
 
 }
 
-.register__exam-tests {
+.exam-tests {
     width: 50%;
     background-image: url('../../assets/images/OM6UUZ0\ 1.svg');
     background-position: center;
@@ -34,11 +52,11 @@
 
 }
 
-.register__board__heading {
+.board__heading {
     margin-bottom: 55px;
 }
 
-.register__board__heading h4 {
+.board__heading h4 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -47,11 +65,11 @@
     margin-bottom: 7px;
 }
 
-.register__board__input__password{
+.input-password{
     width: 100%;
     position: relative;
 }
-.register__board__input__password img{
+.input-password img{
     position: absolute;
 bottom: 50%;
 right: 0;
@@ -84,7 +102,7 @@ cursor: pointer;
     gap: 12px;
 }
 
-.options__student__checkbox {
+.student__checkbox {
     width: 23px;
 }
 
@@ -101,7 +119,7 @@ cursor: pointer;
     gap: 12px;
 }
 
-.options__teacher__checkbox {
+.teacher__checkbox {
     width: 23px;
 }
 
@@ -113,20 +131,15 @@ cursor: pointer;
     color: #2B2A2A;
 }
 
-.register__board__form {
+.board-form {
     margin-bottom: 20px;
 }
 
-.form .input {
-    margin-bottom: 15px;
+.input-email{
+    margin: 16px 0;
 }
 
-.form .input:last-child {
-    margin: 0;
-}
-
-
-.forgot__password {
+.forgot-password {
     display: flex;
     justify-content: flex-end;
     margin-top: 6px;
@@ -137,7 +150,7 @@ cursor: pointer;
     color: #8A7E7E;
 }
 
-.forgot__password__link {
+.forgot-password__link {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -149,7 +162,7 @@ cursor: pointer;
     width: 23px;
 }
 
-.register__board__privacy-policy {
+.privacy-policy {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -182,14 +195,14 @@ cursor: pointer;
     color: #675AF0;
 }
 
-.register__or {
+.or {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 
 }
 
-.register__or span {
+.or span {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -198,7 +211,7 @@ cursor: pointer;
     position: relative;
 }
 
-.register__or span::before {
+.or span::before {
     content: "";
     width: 100px;
     border: 1px solid #C5C4C4;
@@ -208,7 +221,7 @@ cursor: pointer;
     transform: translate(50%, -50%);
 }
 
-.register__or span::after {
+.or span::after {
     content: "";
     width: 100px;
     border: 1px solid #C5C4C4;
