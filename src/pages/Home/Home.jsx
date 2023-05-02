@@ -1,3 +1,4 @@
+// import '../../pages/Home/Home.css'
 import styles from '../Home/Home.module.css'
 import { useState, useEffect } from "react";
 import Exam from "../../companents/Exam/Exam";
@@ -19,41 +20,11 @@ function Home() {
   const [showExam, setShowExam] = useState(3);
   const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
-  // const [exams, setExams] = useState([]);
-  // const [students, setStudents] = useState([]);
   const [showStudent, setShowStudent] = useState(3);
   const [studentCount, setStudentCount] = useState(0);
   const students = useSelector((state) => state.students.students);
   const exams = useSelector((state) => state.exams.exams)
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/users")
-  //     .then((response) => response.json())
-  //     .then((exams) => {
-  //       // setExams(exams);
-  //       // setExamCount(exams.length);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   fetch("https://dummyjson.com/users")
-  //     .then((response) => response.json())
-  //     .then((res) => {
-  //       dispatch(setStudents(res.users));
-  //       setStudentCount(res.users.length);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //     });
-  // }, []);
-
-
-
-
-  // console.log(exams);
   
   useEffect(()=>{
     contentfulClient.getEntries({content_type: "exam", "order":"-sys.createdAt"})
@@ -89,32 +60,32 @@ function Home() {
   return (
     <>
     <Header/>
-    <div style={{marginTop: 90}} className="home section">
-      <div className="final-exams__content">
-        <div className="content__items container">
-          <div className="content__info">
+    <div style={{marginTop: 90}}>
+      <div className={styles["final-exams"]}>
+        <div className={`${styles["exams__items"]} ${styles.container}`}>
+          <div className={styles["exams__info"]}>
             <h3>
               9-cu sinif buraxılış riyaziyyat <br /> imtahanı
             </h3>
             <span>Pulsuz şəkildə başla</span>
-            <div className="content__info__buttons">
-              <div className="start__button">
+            <div className={styles["info__buttons"]}> 
+              <div className={styles["btn__start"]}>
                 <Button size={"md"} color={"secondary"}>
                   {"Testə başla"}
                 </Button>
               </div>
-              <div className="more__button">
+              <div className={styles["btn__more"]}>
                 <Button size={"md"} color={"white"}>
                   {"Daha ətraflı"}
                 </Button>
               </div>
             </div>
           </div>
-          <div className="content__"></div>
+          <div className=""></div>
         </div>
       </div>
-      <div className="final-exams__items container">
-        <div className="final-exams__cards">
+      <div className={`${styles.exams} ${styles.container}`}>
+        <div className={styles["exams__cards"]}>
           {exams?.items?.map((exam, index) => {
             if (index <= showExam) {
               return (
@@ -129,7 +100,7 @@ function Home() {
                 }
           })}
         </div>
-        <div className="final-exams__button">
+        <div className={styles["exams__btn"]}>
           <Button
             // onClick={(e) => showExamFunc(e)}
             size={"md"}
@@ -139,50 +110,50 @@ function Home() {
           </Button>
         </div>
       </div>
-      <div className="entered-exam">
-        <div className="entered-exam__content container">
-          <div className="entered-exam__heading">
+      <div className={styles["access-to-exam"]}>
+        <div className={`${styles["exam__content"]} ${styles.container}`}>
+          <div className={styles["exam__heading"]}>
             <h3>İmtahana giriş</h3>
           </div>
-          <div className="entered-exam__text">
+          <div className={styles["exam__text"]}>
             <p>
               MathQuiz vasitəsi ilə imtahana başlayarkən bir neçə <br />
               addımlardan keçirsiniz
             </p>
           </div>
-          <div className="entered-exam__icons">
+          <div className={styles["exam__icons"]}>
             <img src={User} alt="" />
             <img src={Line} alt="" />
             <img src={Clock} alt="" />
             <img src={Line} alt="" />
             <img src={Crown} alt="" />
           </div>
-          <div className="entered-exam__info">
-            <div className="info__content">
-              <div className="info__heading">
+          <div className={styles["exam__info"]}>
+            <div className={styles["info__content"]}>
+              <div className={styles["info__heading"]}>
                 <span>İlk öncə adınızı daxil edin</span>
               </div>
-              <div className="info__button">
+              <div className={styles["info__btn"]}>
                 <Button size={"sm"} color={"primary"}>
                   {"Step 1"}
                 </Button>
               </div>
             </div>
-            <div className="info__content">
-              <div className="info__heading">
+            <div className={styles["info__content"]}>
+              <div className={styles["info__heading"]}>
                 <span>İmtahanın vaxtı</span>
               </div>
-              <div className="info__button">
+              <div className={styles["info__btn"]}>
                 <Button size={"sm"} color={"primary"}>
                   {"Step 2"}
                 </Button>
               </div>
             </div>
-            <div className="info__content">
-              <div className="info__heading">
+            <div className={styles["info__content"]}>
+              <div className={styles["info__heading"]}>
                 <span>İmtahanın nəticəsi</span>
               </div>
-              <div className="info__button">
+              <div className={styles["info__btn"]}>
                 <Button size={"sm"} color={"primary"}>
                   {"Step 3"}
                 </Button>
@@ -191,14 +162,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="mathQuiz-about">
-        <div className="mathQuiz-about__content container">
-          <div className="participate">
-            <div className="participate__register">
+      <div className={styles["mathQuiz__about"]}>
+        <div className={`${styles["about__content"]} ${styles.container}`}>
+          <div className={styles.participate}>
+            <div className={styles.register}>
               <h3>Sınaq imtahanında iştirak et</h3>
               <span>Əliyar Əliyev - Riyaziyyat sınaqları</span>
               <span>Daha çox sınaqlara qatılmaq üçün</span>
-              <div className="participate__register__button">
+              <div className={styles["register__btn"]}>
                 <Button
                   onClick={() => navigate("/register")}
                   size={"md"}
@@ -208,15 +179,15 @@ function Home() {
                 </Button>
               </div>
             </div>
-            <div className="participate__image"></div>
+            <div className={styles["content__image"]}></div>
           </div>
-          <div className="why-mathQuiz">
-            <div className="why-mathQuiz__image"></div>
-            <div className="why-mathQuiz__info">
-              <div className="why-mathQuiz__info__heading">
+          <div className={styles["why__mathQuiz"]}>
+            <div className={styles["content__image"]}></div>
+            <div className={styles["mathQuiz__info"]}>
+              <div className={styles["info__heading"]}>
                 <h3>Niyə MathQuiz?</h3>
               </div>
-              <div className="why-mathQuiz__info__text">
+              <div className={styles["info__text"]}>
                 <span>Online şəkildə imtahan şansı</span>
                 <span>Pulsuz imtahanlara qoşul</span>
                 <span>Giriş edərək daha çox sınaq imkanı</span>
@@ -225,12 +196,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="my-students">
-        <div className="my-students__heading">
+      <div className={styles.students}>
+        <div className={styles["students__heading"]}>
           <h3>Tələbələrim</h3>
         </div>
-        <div className="my-students__items container">
-          <div className="my-students__cards">
+        <div className={`${styles["students__items"]} ${styles.container}`}>
+          <div className={styles["students__cards"]}>
             {students?.items?.map((student, index) => {
               if (index <= showStudent) {
                 return (
@@ -245,7 +216,7 @@ function Home() {
                   )};
                 })}
           </div>
-          <div className="my-students__button">
+          <div className={styles["students__btn"]}>
             <Button
               onClick={showStudentFunc}
               size={"md"}

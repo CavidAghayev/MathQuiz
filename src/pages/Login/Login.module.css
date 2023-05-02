@@ -3,7 +3,7 @@
     padding: 82px 53px;
 }
 
-.login__content {
+.content {
     background: #F5F5FF;
     border-radius: 35px;
     display: flex;
@@ -14,7 +14,7 @@
     padding: 85px 90px;
 }
 
-.login__board {
+.board {
     background: #FFFFFF;
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
 

@@ -1,4 +1,4 @@
-import "./../../pages/Login/Login.css";
+import styles from '../Login/Login.module.css'
 import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
 import { Link } from "react-router-dom";
@@ -13,16 +13,16 @@ function Login() {
       inputId.type = "text";
     } else {
       inputId.type = "password";
-    }
+    } 
   }
   return (
     <>
     <Header/>
-    <div className="login section">
-      <div className="login__content">
-        <div className="login__details">
-          <div className="login__board">
-            <div className="login__board__heading">
+    <div style={{marginTop: 90}} className={styles.login}>
+      <div className={styles.content}>
+        <div className={styles["login__details"]}>
+          <div className={styles.board}>
+            <div className={styles.heading}>
               <h4>Login</h4>
               <span>Welcome back! Please enter your details.</span>
             </div>
