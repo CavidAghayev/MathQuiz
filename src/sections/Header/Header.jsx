@@ -1,4 +1,4 @@
-import "./../../sections/Header/Header.css";
+import styles from "../Header/Header.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../../companents/Button/Button";
 function Header() {
@@ -6,23 +6,23 @@ function Header() {
 
   return (
     <header>
-      <div className="header__content container">
-        <div className="header__logo">
+      <div className={`${styles["header__content"]} ${styles.container}`}>
+        <div className={styles["header__logo"]}>
           <span onClick={() => navigate("/")}>MathQuiz</span>
         </div>
-        <div className="header__routes">
-          <NavLink to={"/exams"} className="header__routes__exam">
+        <div className={styles["header__routes"]}>
+          <NavLink to={"/exams"} className={styles["route__exam"]}>
             İmtahanlar
           </NavLink>
-          <NavLink to="" className="header__routes__online-videos">
+          <NavLink to="" className={styles["route__online-videos"]}>
             Onlayn videolar
           </NavLink>
-          <NavLink to="" className="header__routes__about">
+          <NavLink to="" className={styles["route__about"]}>
             Haqqımızda
           </NavLink>
         </div>
-        <div className="header__buttons">
-          <div className="header__button__login">
+        <div className={styles["header__buttons"]}>
+          <div className={styles["login__btn"]}>
             <Button
               onClick={() => navigate("/login")}
               color={"white"}
@@ -31,7 +31,7 @@ function Header() {
               {"Log in"}
             </Button>
           </div>
-          <div className="header__button__sign">
+          <div className={styles["signUp__btn"]}>
             <Button
               onClick={() => navigate("/register")}
               color={"primary"}

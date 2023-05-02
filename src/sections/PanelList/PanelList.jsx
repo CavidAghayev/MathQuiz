@@ -1,4 +1,4 @@
-import "../PanelList/PanelList.css";
+import styles from '../PanelList/PanelList.module.css'
 import Dashboard from "../../assets/images/element-2.svg";
 import Teacher from "../../assets/images/teacher.svg";
 import VideoPlay from "../../assets/images/video-play.svg";
@@ -7,8 +7,8 @@ import About from "../../assets/images/stickynote.svg";
 import { DarkMode } from "../../companents/DarkMode/DarkMode";
 export const PanelList = () => {
   return (
-    <div className="panel-list">
-      <div className="panel-list__title">
+    <div className={styles["panel-list"]}>
+      <div className={styles["panel-list__title"]}>
         <h3>MathQuiz</h3>
       </div>
       <ul>

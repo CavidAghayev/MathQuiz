@@ -18,7 +18,7 @@ font-size: 24px;
 line-height: 33px;
 color: #675AF0;
 }
-.panel-list ul li{
+ul li{
     width: 100%;
     height: 79px;
     display: flex;
@@ -26,7 +26,7 @@ color: #675AF0;
     padding-left: 78px;
     gap: 14px;
 }
-.panel-list ul li span{
+ul li span{
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

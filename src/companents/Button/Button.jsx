@@ -1,9 +1,9 @@
-import "./../../companents/Button/Button.css";
+import styles from '../Button/Button.module.css'
 const Button = ({ children, size, color, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={`button button--${size} button--${color}`}
+      className={`${styles.button} ${styles[`button--${size}`]} ${styles[`button--${color}`]}`}
     >
       {children}
     </button>

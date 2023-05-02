@@ -80,6 +80,7 @@
 .input-password{
     width: 100%;
     position: relative;
+    margin-top: 16px;
 }
 .input-password img{
 position: absolute;

@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1072px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 header {
     width: 100%;
     /* padding: 24px 0 23px 0; */
@@ -28,10 +47,14 @@ header {
     cursor: pointer;
 }
 
-.header__routes__program,
-.header__routes__exam,
-.header__routes__online-videos,
-.header__routes__about {
+.header__routes {
+    display: flex;
+    gap: 50px;
+}
+
+.route__exam,
+.route__online-videos,
+.route__about {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -39,20 +62,16 @@ header {
     color: #2B2A2A;
 }
 
-.header__routes {
-    display: flex;
-    gap: 50px;
-}
 
 .header__buttons {
     display: flex;
     gap: 51px;
 }
 
-.header__button__login {
+.login__btn {
     width: 118px;
 }
 
-.header__button__sign {
+.signUp__btn {
     width: 118px;
 }

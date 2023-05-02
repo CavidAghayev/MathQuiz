@@ -1,4 +1,4 @@
-import styles from '../Footer/Footer.module.css'
+import styles from "../Footer/Footer.module.css";
 import { Link } from "react-router-dom";
 import Youtube from "../../assets/images/youtube.svg";
 import Whatsapp from "../../assets/images/whatsapp.svg";
@@ -61,7 +61,7 @@ function Footer() {
           </div>
         </div>
         <hr />
-        <div className={styles.contacts}>n
+        <div className={styles.contacts}>
           <div className={styles["location__icons"]}>
             <Link to={""}>
               <img src={Youtube} alt="" />
