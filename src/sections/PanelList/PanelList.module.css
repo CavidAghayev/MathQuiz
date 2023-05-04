@@ -1,24 +1,79 @@
-.panel-list{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1072px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dark {
+    background: #2B2A2A;
+    width: 310px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 46px;
+    box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.15);
+}
+
+.darkList span{
+    color: #FFFFFF;
+}
+.darkList img{
+    color: white;
+}
+
+.panel-list {
     width: 310px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 46px;
     background: #FFFFFF;
-box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.15);
 }
-.panel-list__title{
+
+.panel-list__title {
     text-align: center;
     margin-bottom: 33px;
+    cursor: pointer;
 }
-.panel-list__title h3{
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 33px;
-color: #675AF0;
+
+.panel-list__title h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #675AF0;
 }
-ul li{
+
+.box {
+    width: 194px;
+    height: 47px;
+    background: #675AF0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.box span {
+    color: #FFFFFF;
+}
+
+ul li {
     width: 100%;
     height: 79px;
     display: flex;
@@ -26,10 +81,16 @@ ul li{
     padding-left: 78px;
     gap: 14px;
 }
-ul li span{
+
+ul li span {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     color: #2B2A2A;
+}
+
+
+ul li:nth-child(2) {
+    padding-left: 58px;
 }

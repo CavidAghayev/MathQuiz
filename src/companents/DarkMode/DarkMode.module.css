@@ -1,6 +1,28 @@
-.darkmode{
-    width: 63px;
+.darkmode {
+    width: 30%;
     height: 30px;
     background: #E2E2E2;
     border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.spin {
+    width: 21px;
+    height: 21px;
+    background: #FFFFFF;
+    border-radius: 17px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(15%, -50%);
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+
+}
+.default{
+    left: 100%;
+    transform: translate(calc(-100% - 15% ) ,-50%);
 }
