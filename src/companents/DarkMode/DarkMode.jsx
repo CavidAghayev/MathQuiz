@@ -6,14 +6,15 @@ export const DarkMode = () => {
   const darkmode = useSelector((state)=>state.darkMode.darkMode)
   const dispatch = useDispatch();
   const ref = useRef(); 
-    function darkMode(){
-      ref.current.classList.toggle(styles["default"])
+    function darkMode(e){
+      e.target.classList.toggle(styles["dark-toggle"])
+      ref.current.classList.toggle(styles["spin-toggle"])
       dispatch(
        setDarkMode(!darkmode)
       )
     }
     console.log(darkmode);
-  return <div onClick={darkMode} className={styles.darkmode}>
+  return <div onClick={(e)=>darkMode(e)} className={styles.darkmode}>
     <div ref={ref} className={styles.spin}></div>
   </div>;
 };

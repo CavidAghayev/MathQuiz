@@ -6,13 +6,11 @@ import ScoreBoard from "../../assets/images/chart.svg";
 import About from "../../assets/images/stickynote.svg";
 import { DarkMode } from "../../companents/DarkMode/DarkMode";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { setDarkMode } from "../../Store/DarkModeSlice";
 export const PanelList = () => {
   const navigate = useNavigate();
   const darkmode = useSelector((state) => state.darkMode.darkMode);
-    // document.querySelectorAll("#list-parent li").forEach((list) => {
-    //   list.classList.add(styles["darkList"])
-    // })
   return (
     <div className={!darkmode ? styles["panel-list"] : styles["dark"]}>
       <div
@@ -21,7 +19,7 @@ export const PanelList = () => {
       >
         <h3>MathQuiz</h3>
       </div>
-      <ul id="list-parent">
+      <ul className={darkmode ? styles["list-parent"] : " "}>
         <li>
           <img src={Dashboard} alt="" />
           <span>Dashboard</span>
