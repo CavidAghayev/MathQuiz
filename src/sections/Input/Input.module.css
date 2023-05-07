@@ -38,6 +38,10 @@
     height: 23px;
 }
 
-.input--md {
+
+.input--md{
+    height: 40px;
+}
+.input--lg {
     height: 46px;
 }

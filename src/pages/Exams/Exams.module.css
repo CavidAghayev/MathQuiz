@@ -10,12 +10,14 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    max-width: 1072px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 .exams{
+    width: 100%;
+    display: flex;
+}
+.exams__user-profile{
+    flex-grow: 1;
+    height: 100%;
+}
+.research{
     width: 100%;
 }

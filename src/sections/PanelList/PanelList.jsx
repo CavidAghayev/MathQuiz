@@ -7,11 +7,11 @@ import About from "../../assets/images/stickynote.svg";
 import { DarkMode } from "../../companents/DarkMode/DarkMode";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { UserProfile } from "../UserProfile/UserProfile";
 export const PanelList = () => {
   const navigate = useNavigate();
   const darkmode = useSelector((state) => state.darkMode.darkMode);
   return (
-    <div className={styles.panel}>
     <div className={!darkmode ? styles["panel__list"] : styles["dark"]}>
       <div
         onClick={() => navigate("/")}
@@ -44,10 +44,6 @@ export const PanelList = () => {
         </li>
         <li>{<DarkMode />}</li>
       </ul>
-    </div>
-    <div className={styles["panel__user-profile"]}>
-
-    </div>
     </div>
   );
 };

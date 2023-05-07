@@ -33,7 +33,7 @@ function Login() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  size={"md"}
+                  size={"lg"}
                   id="email"
                   type="email"
                   text="Email"
@@ -45,7 +45,7 @@ function Login() {
                   onChange={(e) => {
                     setFormData({ ...formData, password: e.target.value });
                   }}
-                  size={"md"}
+                  size={"lg"}
                   id="password"
                   type="password"
                   text="Password"

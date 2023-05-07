@@ -53,7 +53,7 @@ function Register() {
                   onChange={(e) =>
                     setFormData({ ...formData, date: e.target.value })
                   }
-                  size={"md"}
+                  size={"lg"}
                   id="date"
                   type="date"
                   text="Date of birth"
@@ -65,7 +65,7 @@ function Register() {
                   onChange={(e) => {
                     setFormData({ ...formData, email: e.target.value });
                   }}
-                  size={"md"}
+                  size={"lg"}
                   id="email"
                   type="email"
                   text="Email"
@@ -78,7 +78,7 @@ function Register() {
                   onChange={(e) => {
                     setFormData({ ...formData, password: e.target.value });
                   }}
-                  size={"md"}
+                  size={"lg"}
                   id="password"
                   type="password"
                   text="Password"
