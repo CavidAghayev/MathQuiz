@@ -1,11 +1,12 @@
 import styles from '../Login/Login.module.css'
 import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
-import { Link } from "react-router-dom";
+import {useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import Eye from '../../assets/images/eye.svg'
 import Header from "../../sections/Header/Header";
 function Login() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({});
   let inputId = document.getElementById("password");
   function showPassword() {
@@ -27,7 +28,7 @@ function Login() {
               <span>Welcome back! Please enter your details.</span>
             </div>
             <div className={styles["board__form"]}>
-              <form action="" className={styles.form}>
+              <form  action="">
                 <Input
                   value={formData.email}
                   onChange={(e) =>
@@ -73,7 +74,7 @@ function Login() {
               </div>
             </div>
             <div className={styles["board__btn"]}>
-              <Button size={"lg"} color={"primary"}>
+              <Button onClick={()=>navigate('/dashboard')} size={"lg"} color={"primary"}>
                 {"Login"}
               </Button>
             </div>

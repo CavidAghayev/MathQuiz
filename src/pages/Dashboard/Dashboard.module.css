@@ -10,31 +10,17 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.exams{
+.dashboard {
     width: 100%;
+    display: flex;
+}
+
+
+
+.user-profile{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #F6F6F6;
     flex-grow: 1;
-    padding: 20px 30px;
-}
-.research{
-    width: 100%;
-}
-.search{
-    width: 360px;
-}
-.select{
-display: flex;
-gap: 15px;
-}
-.select__type{
-    width: 163px;
-}
-.select__price{
-    width: 163px;
-}
-.form{
-    display: flex;
-    justify-content: space-between;
 }

@@ -1,14 +1,16 @@
+import React from "react";
 import styles from "../PanelList/PanelList.module.css";
 import Dashboard from "../../assets/images/element-2.svg";
-import Teacher from "../../assets/images/teacher.svg";
+import Teacher from "../../assets/images/teacher (1).svg";
 import VideoPlay from "../../assets/images/video-play.svg";
 import ScoreBoard from "../../assets/images/chart.svg";
 import About from "../../assets/images/stickynote.svg";
 import { DarkMode } from "../../companents/DarkMode/DarkMode";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { UserProfile } from "../UserProfile/UserProfile";
+import { useRef,useEffect } from "react";
 export const PanelList = () => {
+  const listRef = useRef();
   const navigate = useNavigate();
   const darkmode = useSelector((state) => state.darkMode.darkMode);
   return (
@@ -20,29 +22,39 @@ export const PanelList = () => {
         <h3>MathQuiz</h3>
       </div>
       <ul className={darkmode ? styles["list-parent"] : " "}>
-        <li>
-          <img src={Dashboard} alt="" />
-          <span>Dashboard</span>
+        <li ref={listRef}>
+          <NavLink to={''} className={styles.nav}>
+            <img src={Dashboard} alt="" />
+            <span>Dashboard</span>
+          </NavLink>
         </li>
-        <li>
-          <div className={styles.box}>
+        <li ref={listRef}>
+          <NavLink to={''} className={styles.nav}>
             <img src={Teacher} alt="" />
             <span>Imtahanlar</span>
-          </div>
+          </NavLink>
         </li>
-        <li>
-          <img src={VideoPlay} alt="" />
-          <span>Onlayn Videolar</span>
+        <li ref={listRef}>
+          <NavLink to={''} className={styles.nav}>
+            <img src={VideoPlay} alt="" />
+            <span>Onlayn Videolar</span>
+          </NavLink>
         </li>
-        <li>
-          <img src={ScoreBoard} alt="" />
-          <span>ScoreBoard</span>
+        <li ref={listRef}>
+          <NavLink to={''} className={styles.nav}>
+            <img src={ScoreBoard} alt="" />
+            <span>ScoreBoard</span>
+          </NavLink>
         </li>
-        <li>
-          <img src={About} alt="" />
-          <span>Haqqımızda</span>
+        <li ref={listRef}>
+          <NavLink to={''} className={styles.nav}>
+            <img src={About} alt="" />
+            <span>Haqqımızda</span>
+          </NavLink>
         </li>
-        <li>{<DarkMode />}</li>
+        <li ref={listRef} className={styles.darkmode}>
+          <DarkMode />
+        </li>
       </ul>
     </div>
   );

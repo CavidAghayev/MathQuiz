@@ -8,6 +8,7 @@ const Input = ({
   onChange,
   value = "",
   onClick,
+  placeholder
 }) => {
   return (
     <>
@@ -22,6 +23,7 @@ const Input = ({
         type={type}
         id={id}
         date={date}
+        placeholder={placeholder}
       />
     </>
   );

@@ -4,7 +4,7 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import ExamDetails from "./pages/ExamDetails/ExamDetails";
-import { Exams } from "./pages/Exams/Exams";
+import { Dashboard } from "./pages/Dashboard/Dashboard";
 function App() {
   return (
     <>
@@ -14,7 +14,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/examDetails/:id" element={<ExamDetails />}/>
-          <Route path="/exams" element={<Exams />}/>
+          <Route path="/dashboard" element={<Dashboard />}/>
         </Routes>
       </Router>
     </>

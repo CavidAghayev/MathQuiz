@@ -1,19 +1,13 @@
 import styles from '../Exams/Exams.module.css'
-import { PanelList } from '../../sections/PanelList/PanelList'
 import Input from '../../sections/Input/Input'
-import { UserProfile } from '../../sections/UserProfile/UserProfile'
 import { useState } from 'react'
+import { Select } from '../../sections/Select/Select'
 export const Exams = () => {
    const [formData,setFormData] = useState({});
-   console.log(formData)
   return (
     <div className={styles.exams}>
-      <PanelList />
-      <div className={styles["exams__user-profile"]}>
-      <UserProfile />
       <div className={styles.research}>
-        <div className={styles["inputs"]}>
-        <form action="">
+        <form action="" className={styles.form}>
           <div className={styles["search"]}>
         <Input
         value={formData.search}
@@ -23,16 +17,30 @@ export const Exams = () => {
         size={"md"}
         type="search"
         id="search"
+        placeholder={"Search"}
         />
           </div>
-          <div className={styles.selects}>
-            
+          <div className={styles.select}>
+            <div className={styles.select__type}>
+            <Select
+            size={"sm"}
+            >
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+              <option value="d">d</option>
+            </Select>
+            </div>
+            <div className={styles.select__price}>
+            <Select
+            size={"sm"}
+            >
+              </Select>
+            </div>
           </div>
         </form>
-        </div>
       </div>
 
-      </div>
     </div>
   )
 }
