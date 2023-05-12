@@ -30,11 +30,31 @@ gap: 15px;
 }
 .select__type{
     width: 163px;
+    position: relative;
 }
 .select__price{
     width: 163px;
+    position: relative;
 }
 .form{
     display: flex;
     justify-content: space-between;
+}
+.select__type img{
+    position: absolute;
+    bottom: 50%;
+    transform: translate(-5px,50%);
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+
+.select__price img{
+    position: absolute;
+    bottom: 50%;
+    transform: translate(-5px,50%);
+    right: 0;
+    cursor: pointer;
 }
