@@ -17,6 +17,33 @@
     padding: 0 20px;
 }
 
+
+.panel-list {
+    width: 310px;
+    height: 100vh;
+    display: flex;
+    background: #FFFFFF;
+    flex-direction: column;
+    box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    padding: 50px;
+}
+
+.panel-list__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.panel-list__title h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #675AF0;
+}
+
 .dark {
     background: #2B2A2A;
     width: 310px;
@@ -30,32 +57,6 @@
 
 .darkList span {
     color: #FFFFFF;
-}
-
-.panel__list {
-    width: 310px;
-    height: 100vh;
-    display: flex;
-    background: #FFFFFF;
-    flex-direction: column;
-    box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.15);
-    z-index: 9999;
-    padding: 50px;
-}
-
-.panel__list__title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 50px;
-    cursor: pointer;
-}
-
-.panel__list__title h3 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
-    color: #675AF0;
 }
 
 ul li {
@@ -83,6 +84,9 @@ ul li {
     padding: 12px 0;
     border-radius: 12px;
 }
+/* .nav svg path{
+    fill: red;
+} */
 .nav:active{
     background-color:#675AF0;
     justify-content: center;

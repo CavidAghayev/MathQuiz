@@ -1,4 +1,4 @@
-import styles from '../Input/Input.module.css'
+import styles from "../Input/Input.module.css";
 const Input = ({
   size,
   id,
@@ -7,8 +7,12 @@ const Input = ({
   date,
   onChange,
   value = "",
-  onClick,
-  placeholder
+  border,
+  background,
+  textIndent,
+  center,
+  color,
+  placeholder,
 }) => {
   return (
     <>
@@ -18,8 +22,11 @@ const Input = ({
       <input
         value={value}
         onChange={onChange}
-        onClick={onClick}
-        className={`${styles.input} ${styles[`input--${size}`]}`}
+        className={`${styles.input} ${styles[`input--${size}`]} ${
+          styles[`input--${border}`]
+        } ${styles[`input--${background}`]} ${styles[`input--${center}`]} ${
+          styles[`input--${color} `]
+        }`}
         type={type}
         id={id}
         date={date}

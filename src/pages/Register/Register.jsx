@@ -15,6 +15,10 @@ function Register() {
       inputId.type = "password";
     }
   }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("salam");
+  }
   return (
     <>
     <Header/>
@@ -46,7 +50,7 @@ function Register() {
               </div>
             </div>
             <div className={styles["board-form"]}>
-              <form action="" className={styles.form}>
+              <form onSubmit={handleSubmit} action="" className={styles.form}>
                 <div className={styles["input-date"]}>
                 <Input
                   value={formData.date}
@@ -84,15 +88,13 @@ function Register() {
                   text="Password"
                   />
                 </div>
-              </form>
               <div className={styles["input-icon"]}></div>
               <div className={styles["forgot-password"]}>
                 <Link className={styles["forgot-password__link"]} to="">
-                  Forgot password
-                </Link>
+                  Forgot password?
+                </Link> 
               </div>
-            </div>
-            <div className={styles["privacy-policy"]}>
+              <div className={styles["privacy-policy"]}>
               <div className={styles.checkbox}>
                 <Input
                   size={"sm"}
@@ -107,9 +109,16 @@ function Register() {
               </div>
             </div>
             <div className={styles["board__btn"]}>
-              <Button size={"lg"} color={"primary"}>
-                {"Sign Up"}
-              </Button>
+            <Input
+                  color={"colorWhite"}
+                  center={"center"}
+                  background={"primary"}
+                  value="Sign Up"
+                  size={"lg"}
+                  type={"submit"}
+                />
+            </div>
+              </form>
             </div>
             <div className={styles.or}>
               <span>or</span>

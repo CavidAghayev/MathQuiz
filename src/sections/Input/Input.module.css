@@ -21,7 +21,13 @@
     width: 100%;
     border: 1px solid #D2D2D2;
     border-radius: 6px;
-    padding: 0 10px;
+    text-indent: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #8A7E7E;
+    cursor: pointer;
 }
 
 .label {
@@ -38,10 +44,27 @@
     height: 23px;
 }
 
+.input--colorWhite {
+    color: #FFFFFF;
+}
 
-.input--md{
+.input--md {
     height: 40px;
 }
+
 .input--lg {
     height: 46px;
 }
+
+.input--none {
+    border: none;
+}
+
+.input--center {
+    text-align: center;
+}
+
+.input--primary {
+    background-color: #675AF0;
+}
+

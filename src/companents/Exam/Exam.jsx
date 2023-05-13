@@ -11,7 +11,7 @@ function Exam({ image, examtitle, free , exam }) {
       </div>
       <div className={styles.info}>
         <h3>{examtitle}</h3>
-        <span>{free}</span>
+        <span>{exam.fields.text}</span>
       </div>
       <div className={styles.buttons}>
         <Button size={"sm"} color={"primary"}>

@@ -18,10 +18,10 @@ import Header from "../../sections/Header/Header";
 
 function Home() {
   const [showExam, setShowExam] = useState(3);
-  const [examCount, setExamCount] = useState(0);
+  // const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
   const [showStudent, setShowStudent] = useState(3);
-  const [studentCount, setStudentCount] = useState(0);
+  // const [studentCount, setStudentCount] = useState(0);
   const students = useSelector((state) => state.students.students);
   const exams = useSelector((state) => state.exams.exams)
   const dispatch = useDispatch();
@@ -30,9 +30,10 @@ function Home() {
     contentfulClient.getEntries({content_type: "exam", "order":"-sys.createdAt"})
     .then((data) => {
      dispatch(setExams(data))
+    //  console.log(setExams(data));
     })
     .catch((error) => console.log(error.message))
-  });
+  },[]);
   
   useEffect(() => {
     contentfulClient.getEntries({ content_type: "student", "order":"-sys.createdAt" })
@@ -42,18 +43,19 @@ function Home() {
     .catch((error)=> console.log(error.message))
   }, []);
   
-  // function showExamFunc(e) {
-  //   if (showExam <= examCount - 2) {
-  //     setShowExam(showExam + 4);
-  //   } else {
-  //     setShowExam(3);
-  //   }
-  // }
+  function showExamFunc(e) {
+    if (showExam) {
+      setShowExam(showExam + 4);
+    } else {
+      setShowExam(3);
+    }
+  }
 
   function showStudentFunc() {
-    if (showStudent <= studentCount - 2) {
+    if (showStudent) {
       setShowStudent(showStudent + 4);
-    } else {
+    }
+     else {
       setShowStudent(3);
     }
   }
@@ -102,11 +104,11 @@ function Home() {
         </div>
         <div className={styles["exams__btn"]}>
           <Button
-            // onClick={(e) => showExamFunc(e)}
+            onClick={(e) => showExamFunc(e)}
             size={"md"}
             color={"primary"}
             >
-            {showExam <= examCount - 2 ? "Daha çox" : "Gizlet"}
+            {showExam ? "Daha çox" : "Gizlet"}
           </Button>
         </div>
       </div>
@@ -222,7 +224,7 @@ function Home() {
               size={"md"}
               color={"primary"}
             >
-              {showStudent <= studentCount - 2 ? "Daha çox" : "Gizlət"}
+              {showStudent ? "Daha çox" :  "Gizlət"}
             </Button>
           </div>
         </div>
