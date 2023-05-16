@@ -8,7 +8,7 @@ export const Dashboard = () => {
         <PanelList/>
         <div className={styles["user-profile"]}>
             <UserProfile/>
-            <Exams/>
+            {/* <Exams/> */}
         </div>
     </div>
   )

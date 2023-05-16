@@ -9,6 +9,7 @@ const Input = ({
   value = "",
   border,
   color,
+  cursor,
   background,
   center,
   placeholder,
@@ -23,7 +24,7 @@ const Input = ({
         onChange={onChange}
         className={`${styles.input} ${styles[`input--${size}`]} ${
           styles[`input--${border}`]
-        } ${styles[`input--${background}`]} ${styles[`input--${center}`]} ${styles[`input--${color}`]}`}
+        } ${styles[`input--${background}`]} ${styles[`input--${center}`]} ${styles[`input--${color}`]} ${styles[`input--${cursor}`]}`}
         type={type}
         id={id}
         date={date}

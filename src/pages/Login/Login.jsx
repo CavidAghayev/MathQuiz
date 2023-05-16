@@ -17,8 +17,9 @@ function Login() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/dashboard");
+      navigate("/dashboard");
   };
+  console.log(formData);
   return (
     <>
       <Header />
@@ -79,6 +80,7 @@ function Login() {
                       value="Login"
                       size={"lg"}
                       type={"submit"}
+                      cursor={"cursor"}
                     />
                   </div>
                 </form>

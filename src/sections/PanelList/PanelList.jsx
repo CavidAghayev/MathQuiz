@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../PanelList/PanelList.module.css";
 import { ReactComponent as DashBoard } from "../../assets/images/element-2.svg";
 import { ReactComponent as VideoPlay } from "../../assets/images/video-play.svg";
@@ -6,12 +6,12 @@ import { ReactComponent as ScoreBoard } from "../../assets/images/chart.svg";
 import { ReactComponent as About } from "../../assets/images/stickynote.svg";
 import { DarkMode } from "../../companents/DarkMode/DarkMode";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { ReactComponent as Teacher } from "../../assets/images/teacher (2).svg";
-
+import { Exams } from "../Exams/Exams";
 export const PanelList = () => {
   const navigate = useNavigate();
-  const darkmode = useSelector((state) => state.darkMode.darkMode);
+  // const darkmode = useSelector((state) => state.darkMode.darkMode);
   return (
     <div className={styles["panel-list"]}>
       <div

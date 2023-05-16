@@ -17,7 +17,6 @@ function Register() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("salam");
   }
   return (
     <>
@@ -116,6 +115,7 @@ function Register() {
                   value="Sign Up"
                   size={"lg"}
                   type={"submit"}
+                  cursor={"cursor"}
                 />
             </div>
               </form>
