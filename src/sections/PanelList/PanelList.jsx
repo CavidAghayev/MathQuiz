@@ -7,48 +7,49 @@ import { ReactComponent as About } from "../../assets/images/stickynote.svg";
 import { DarkMode } from "../../companents/DarkMode/DarkMode";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ReactComponent as Teacher } from '../../assets/images/teacher.svg' 
+import { ReactComponent as Teacher } from "../../assets/images/teacher (2).svg";
+
 export const PanelList = () => {
   const navigate = useNavigate();
   const darkmode = useSelector((state) => state.darkMode.darkMode);
   return (
-    <div className={!darkmode ? styles["panel-list"] : styles["dark"]}>
+    <div className={styles["panel-list"]}>
       <div
         onClick={() => navigate("/")}
         className={styles["panel-list__title"]}
       >
         <h3>MathQuiz</h3>
       </div>
-      <ul className={darkmode ? styles["list-parent"] : null}>
+      <ul className={styles["list-parent"]}>
         <li>
           <NavLink to={''} className={styles.nav}>
-            <DashBoard fill="red"/>
+            <DashBoard fill=""/>
             <span>Dashboard</span>
           </NavLink>
         </li>
         <li>
           <NavLink to={''} className={styles.nav}>
           <Teacher 
-            fill="red"
+            fill=""
             />
             <span>Imtahanlar</span>
           </NavLink>
         </li>
         <li>
           <NavLink to={''} className={styles.nav}>
-            <VideoPlay fill="red"/>
+            <VideoPlay fill=""/>
             <span>Onlayn Videolar</span>
           </NavLink>
         </li>
         <li>
           <NavLink to={''} className={styles.nav}>
-            <ScoreBoard fill="red"/>
+            <ScoreBoard fill=""/>
             <span>ScoreBoard</span>
           </NavLink>
         </li>
         <li>
           <NavLink to={''} className={styles.nav}>
-            <About fill="red"/>
+            <About fill=""/>
             <span>Haqqımızda</span>
           </NavLink>
         </li>
