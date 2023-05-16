@@ -8,10 +8,9 @@ const Input = ({
   onChange,
   value = "",
   border,
-  background,
-  textIndent,
-  center,
   color,
+  background,
+  center,
   placeholder,
 }) => {
   return (
@@ -24,9 +23,7 @@ const Input = ({
         onChange={onChange}
         className={`${styles.input} ${styles[`input--${size}`]} ${
           styles[`input--${border}`]
-        } ${styles[`input--${background}`]} ${styles[`input--${center}`]} ${
-          styles[`input--${color} `]
-        }`}
+        } ${styles[`input--${background}`]} ${styles[`input--${center}`]} ${styles[`input--${color}`]}`}
         type={type}
         id={id}
         date={date}

@@ -1,9 +1,13 @@
 import styles from "../Header/Header.module.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import Button from "../../companents/Button/Button";
+import { useEffect } from "react";
 function Header() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const navigate = useNavigate();
-
   return (
     <header>
       <div className={`${styles["header__content"]} ${styles.container}`}>

@@ -10,13 +10,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    max-width: 1072px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 .input {
     width: 100%;
     border: 1px solid #D2D2D2;
@@ -44,9 +37,6 @@
     height: 23px;
 }
 
-.input--colorWhite {
-    color: #FFFFFF;
-}
 
 .input--md {
     height: 40px;
@@ -66,5 +56,8 @@
 
 .input--primary {
     background-color: #675AF0;
+}
+.input--white{
+    color: #FFFFFF;
 }
 

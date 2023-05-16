@@ -17,7 +17,7 @@ function Login() {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/dashboard')
+    navigate("/dashboard");
   };
   return (
     <>
@@ -55,32 +55,32 @@ function Login() {
                       text="Password"
                     />
                   </div>
-                <div className={styles["forgot-password"]}>
-                  <Link className={styles["forgot-password__link"]} to="">
-                    Forgot password?
-                  </Link>
-                </div>
-              <div className={styles["privacy-policy"]}>
-                <div className={styles.checkbox}>
-                  <Input size={"sm"} type={"checkbox"} />
-                </div>
-                <div className={styles["privacy-policy__text"]}>
-                  <p>I accept (name) and Terms of Services</p>
-                  <Link className={styles["privacy-policy__link"]} to="">
-                    Privacy Policy
-                  </Link>
-                </div>
-              </div>
-              <div className={styles["board__btn"]}>
-                <Input
-                  color={"colorWhite"}
-                  center={"center"}
-                  background={"primary"}
-                  value="Login"
-                  size={"lg"}
-                  type={"submit"}
-                />
-              </div>
+                  <div className={styles["forgot-password"]}>
+                    <Link className={styles["forgot-password__link"]} to="">
+                      Forgot password?
+                    </Link>
+                  </div>
+                  <div className={styles["privacy-policy"]}>
+                    <div className={styles.checkbox}>
+                      <Input size={"sm"} type={"checkbox"} />
+                    </div>
+                    <div className={styles["privacy-policy__text"]}>
+                      <p>I accept (name) and Terms of Services</p>
+                      <Link className={styles["privacy-policy__link"]} to="">
+                        Privacy Policy
+                      </Link>
+                    </div>
+                  </div>
+                  <div className={styles["board__btn"]}>
+                    <Input
+                      color={"white"}
+                      center={"center"}
+                      background={"primary"}
+                      value="Login"
+                      size={"lg"}
+                      type={"submit"}
+                    />
+                  </div>
                 </form>
               </div>
             </div>

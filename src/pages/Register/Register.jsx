@@ -110,7 +110,7 @@ function Register() {
             </div>
             <div className={styles["board__btn"]}>
             <Input
-                  color={"colorWhite"}
+                  color={"white"}
                   center={"center"}
                   background={"primary"}
                   value="Sign Up"
