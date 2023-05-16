@@ -1,7 +1,7 @@
 import styles from "../Exams/Exams.module.css";
-import Input from "../Input/Input";
+import Input from "../../sections/Input/Input"
 import { useState } from "react";
-import { Select } from "../Select/Select";
+import { Select } from "../../sections/Select/Select";
 import Arrow from "../../assets/images/arrow-down.svg";
 import Search from "../../assets/images/search-normal.svg";
 import { useSelector } from "react-redux";

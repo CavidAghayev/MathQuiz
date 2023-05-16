@@ -10,14 +10,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    max-width: 1072px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
 .panel-list {
     width: 310px;
     height: 100vh;
@@ -87,10 +79,6 @@ ul li {
 /* .nav svg path{
     fill: red;
 } */
-.nav:active{
-    background-color:#675AF0;
-    justify-content: center;
-}
 .nav:active span{
     color: #FFFFFF;
 }
