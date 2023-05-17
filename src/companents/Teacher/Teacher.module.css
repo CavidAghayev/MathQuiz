@@ -1,0 +1,45 @@
+.teacher{
+    margin-bottom: 30px;
+}
+.teacher__content{
+    display: flex;
+    gap: 30px;
+}
+.teacher__description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.teacher__description span{
+    font-weight: bold;
+}
+.teacher__text p{
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 166.1%;
+letter-spacing: 0.025em;
+color: #2B2A2A;
+}
+.certificates{
+    padding: 20px 0;
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+}
+.images img{
+    width: 240px;
+    height: 300px;
+}
+.title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title h3{
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+color: #2B2A2A;
+}

@@ -12,19 +12,19 @@ export const Dashboard = () => {
   return (
     <div className={styles.dashboard}>
       <div className={styles["panel-list"]}>
-      <PanelList setPage={setPage} page={page} />
+        <PanelList setPage={setPage} page={page} />
       </div>
       <div className={styles["dashboard__content"]}>
         <div className={styles["user-profile"]}>
-      <UserProfile />
+          <UserProfile />
         </div>
-      <div className={styles.components}>
-      {page === 0 && <ComponentDashboard />}
-      {page === 1 && <Exams />}
-      {page === 2 && <OnlineVideos />}
-      {page === 3 && <ScoreBoard />}
-      {page === 4 && <About />}
-      </div>
+        <div className={styles.components}>
+          {page === 0 && <ComponentDashboard />}
+          {page === 1 && <Exams />}
+          {page === 2 && <OnlineVideos />}
+          {page === 3 && <ScoreBoard />}
+          {page === 4 && <About />}
+        </div>
       </div>
     </div>
   );
