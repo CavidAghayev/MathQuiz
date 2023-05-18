@@ -1,5 +1,5 @@
 import styles from "../Select/Select.module.css";
-export const Select = ({ size,children }) => {
+export const Select = ({ size, children }) => {
   return (
     <div>
       <select

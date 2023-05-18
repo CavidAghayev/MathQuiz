@@ -76,12 +76,14 @@ ul li {
     padding: 12px 0;
     border-radius: 12px;
 }
+
 /* .nav svg path{
     fill: red;
 } */
-.nav:active span{
+.nav:active span {
     color: #FFFFFF;
 }
+
 .darkmode {
     width: 60px;
 }

@@ -1,9 +1,12 @@
-import styles from '../Student/Student.module.css'
+import styles from "../Student/Student.module.css";
 import { useNavigate } from "react-router-dom";
-function Student({ sName, image, university, point, student}) {
+function Student({ sName, image, university, point, student }) {
   const navigate = useNavigate();
   return (
-    <div onClick={()=>navigate(`/studentDetails/${student.sys.id}`)} className={styles.student}>
+    <div
+      onClick={() => navigate(`/studentDetails/${student.sys.id}`)}
+      className={styles.student}
+    >
       <div className={styles.image}>
         <img src={image} alt="" />
       </div>
@@ -12,7 +15,7 @@ function Student({ sName, image, university, point, student}) {
         <span>{`${"Universitet:"} ${university}`}</span>
         <span>{`${"Bal:"} ${point}`}</span>
       </div>
-    </div>  
+    </div>
   );
 }
 

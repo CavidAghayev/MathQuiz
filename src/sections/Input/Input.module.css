@@ -56,11 +56,12 @@
 .input--primary {
     background-color: #675AF0;
 }
-.input--white{
+
+.input--white {
     color: #FFFFFF;
 }
 
 
-.input--cursor{
+.input--cursor {
     cursor: pointer;
 }

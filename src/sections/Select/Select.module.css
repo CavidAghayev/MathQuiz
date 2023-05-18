@@ -1,13 +1,14 @@
-.select{
+.select {
     width: 100%;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     background: #FFFFFF;
-box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
-padding: 10px;
-appearance: none;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    appearance: none;
 }
-.select--sm{
+
+.select--sm {
     height: 40px;
 }

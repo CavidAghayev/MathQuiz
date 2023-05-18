@@ -50,12 +50,12 @@ export const PanelList = ({ setPage, page }) => {
         </li>
         <li>
           <NavLink
-           onClick={() => {
-            setPage(2);
-          }}
-          style={{
-            backgroundColor: page === 2 ? "#675AF0" : "unset",
-          }}
+            onClick={() => {
+              setPage(2);
+            }}
+            style={{
+              backgroundColor: page === 2 ? "#675AF0" : "unset",
+            }}
             className={styles.nav}
           >
             <VideoPlay fill="" />
@@ -64,26 +64,30 @@ export const PanelList = ({ setPage, page }) => {
         </li>
         <li>
           <NavLink
-          onClick={() => {
-            setPage(3);
-          }}
-          style={{
-            backgroundColor: page === 3 ? "#675AF0" : "unset",
-          }}
-          to={""} className={styles.nav}>
+            onClick={() => {
+              setPage(3);
+            }}
+            style={{
+              backgroundColor: page === 3 ? "#675AF0" : "unset",
+            }}
+            to={""}
+            className={styles.nav}
+          >
             <ScoreBoard fill="" />
             <span>ScoreBoard</span>
           </NavLink>
         </li>
         <li>
           <NavLink
-          onClick={() => {
-            setPage(4);
-          }}
-          style={{
-            backgroundColor: page === 4 ? "#675AF0" : "unset",
-          }}
-          to={""} className={styles.nav}>
+            onClick={() => {
+              setPage(4);
+            }}
+            style={{
+              backgroundColor: page === 4 ? "#675AF0" : "unset",
+            }}
+            to={""}
+            className={styles.nav}
+          >
             <About fill="" />
             <span>Haqqımızda</span>
           </NavLink>

@@ -1,9 +1,9 @@
-import styles from '../Exam/Exam.module.css'
+import styles from "../Exam/Exam.module.css";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
-function Exam({ image, examtitle, free , exam }) {
-  const navigate = useNavigate()
+function Exam({ image, examtitle, free, exam }) {
+  const navigate = useNavigate();
   return (
     <div className={styles.exam}>
       <div className={styles.image}>
@@ -17,8 +17,11 @@ function Exam({ image, examtitle, free , exam }) {
         <Button size={"sm"} color={"primary"}>
           {"Testə başla"}
         </Button>
-        <Button onClick={()=> navigate(`/examDetails/${exam.sys.id}`)} 
-        size={"sm"} color={"white"}>
+        <Button
+          onClick={() => navigate(`/examDetails/${exam.sys.id}`)}
+          size={"sm"}
+          color={"white"}
+        >
           {"Daha ətraflı"}
         </Button>
       </div>

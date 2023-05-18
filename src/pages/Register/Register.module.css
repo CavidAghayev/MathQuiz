@@ -16,6 +16,7 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
 .register {
     width: 100%;
     padding: 82px 53px;
@@ -65,16 +66,17 @@
     margin-bottom: 7px;
 }
 
-.input-password{
+.input-password {
     width: 100%;
     position: relative;
 }
-.input-password img{
+
+.input-password img {
     position: absolute;
-bottom: 50%;
-right: 0;
-transform: translate(-50%,100%);
-cursor: pointer;
+    bottom: 50%;
+    right: 0;
+    transform: translate(-50%, 100%);
+    cursor: pointer;
 }
 
 .who-are-you {
@@ -135,7 +137,7 @@ cursor: pointer;
     margin-bottom: 20px;
 }
 
-.input-email{
+.input-email {
     margin: 16px 0;
 }
 

@@ -1,6 +1,6 @@
-import styles from '../UserProfile/UserProfile.module.css'
-import arrow from '../../assets/images/arrow-down.svg'
-import userProfile from '../../assets/images/Frame 32.svg'
+import styles from "../UserProfile/UserProfile.module.css";
+import arrow from "../../assets/images/arrow-down.svg";
+import userProfile from "../../assets/images/Frame 32.svg";
 export const UserProfile = () => {
   return (
     <div className={styles["user-profile"]}>
@@ -13,5 +13,5 @@ export const UserProfile = () => {
         <img src={arrow} alt="" />
       </div>
     </div>
-  )
-}
+  );
+};

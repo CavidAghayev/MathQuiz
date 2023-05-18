@@ -1,4 +1,4 @@
-import "./Global.css"
+import "./Global.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
@@ -13,8 +13,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/examDetails/:id" element={<ExamDetails />}/>
-          <Route path="/dashboard" element={<Dashboard />}/>
+          <Route path="/examDetails/:id" element={<ExamDetails />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </>
