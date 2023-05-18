@@ -1,4 +1,3 @@
-// import '../../pages/Home/Home.css'
 import styles from "../Home/Home.module.css";
 import { useState, useEffect } from "react";
 import Exam from "../../companents/Exam/Exam";

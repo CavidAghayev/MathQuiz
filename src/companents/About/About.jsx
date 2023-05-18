@@ -1,17 +1,14 @@
 import styles from "../About/About.module.css";
 import { contentfulClient } from "../../libs/contentul";
-import { useSelector, useDispatch } from "react-redux";
-import { setTeachers } from "../../Store/TeachersSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Teacher } from "../Teacher/Teacher";
 export const About = () => {
-  const teachers = useSelector((state) => state.teachers.teachers);
-  const dispatch = useDispatch();
+  const [teachers,setTeachers] = useState([]);
   useEffect(() => {
     contentfulClient
       .getEntries({ content_type: "teacher", order: "-sys.createdAt" })
       .then((teacher) => {
-        dispatch(setTeachers(teacher));
+        setTeachers(teacher)
       })
       .catch((error) => console.log(error.message));
   }, []);
