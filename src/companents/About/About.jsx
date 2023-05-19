@@ -25,7 +25,7 @@ export const About = () => {
             work={teacher.fields.work}
             experience={teacher.fields.experience}
             age={teacher.fields.age}
-            certificate={teacher.fields.certficate.fields.file.url}
+            certificate={teacher.fields.certificate.fields.file.url}
           />
         );
       })}

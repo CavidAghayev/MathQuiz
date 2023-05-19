@@ -13,12 +13,13 @@
 .dashboard {
     width: 100%;
     display: flex;
+    justify-content: flex-end;
 }
 
 
 
 .dashboard__content {
-    width: 100%;
+    width: calc(100% - 310px);
     display: flex;
     flex-direction: column;
 }
