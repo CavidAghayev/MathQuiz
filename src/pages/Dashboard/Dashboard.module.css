@@ -31,5 +31,6 @@
 
 .components {
     width: 100%;
-    padding: 40px 30px;
+    padding: 20px 30px;
+    background-color: #F6F6F6;
 }

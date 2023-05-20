@@ -7,6 +7,7 @@ import { ComponentDashboard } from "../../companents/ComponentDashboard/Componen
 import { ScoreBoard } from "../../companents/ScoreBoard/ScoreBoard";
 import { About } from "../../companents/About/About";
 import { OnlineVideos } from "../../companents/OnlineVideos/OnlineVideos";
+import ExamDetails from "../../companents/ExamDetails/ExamDetails";
 export const Dashboard = () => {
   const [page, setPage] = useState(0); // 0- dashboard , 1 - exams, 2 - online video, 3 - ScoreBoard, 4 - about
   return (
@@ -20,10 +21,11 @@ export const Dashboard = () => {
         </div>
         <div className={styles.components}>
           {page === 0 && <ComponentDashboard />}
-          {page === 1 && <Exams />}
+          {page === 1 && <Exams setPage={setPage} />}
           {page === 2 && <OnlineVideos />}
           {page === 3 && <ScoreBoard />}
           {page === 4 && <About />}
+          {page === 5 && <ExamDetails />}
         </div>
       </div>
     </div>
