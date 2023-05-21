@@ -1,5 +1,7 @@
 import styles from "../../companents/ExamStart/ExamStart.module.css";
 import Input from "../../sections/Input/Input";
+import Test from "../../assets/images/image 45.svg";
+import Button from "../Button/Button"
 import { useState } from "react";
 export const ExamStart = ({}) => {
   const [formData, setFormData] = useState({});
@@ -45,6 +47,23 @@ export const ExamStart = ({}) => {
           />
         </div>
       </form>
+      <div className={styles.image}>
+        <img src={Test} alt="" />
+      </div>
+      <div className={styles.text}>
+        <p>
+          Məlumatlar doğrudursa imtahana başlaya bilərsiniz, <br /> başladıqdan sonra
+          əvvəlki səhifəyə qayıda <br /> bilməyəcəksiniz.
+        </p>
+      </div>
+      <div className={styles.btn}>
+        <Button
+        size={"lg"}
+        color={"primary"}
+        >
+            {"İmtahana başla"}
+        </Button>
+      </div>
     </div>
   );
 };

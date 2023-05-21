@@ -27,3 +27,31 @@ justify-content: center;
 .question-count{
     width: 156px;
 }
+.image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 47px;
+}
+
+.text{
+    margin-bottom: 30px;
+}
+
+.text p{
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+text-align: center;
+color: #000000;
+}
+
+
+
+
+
+
+.btn{
+    width: 219px;
+    margin: 0 auto;
+}
