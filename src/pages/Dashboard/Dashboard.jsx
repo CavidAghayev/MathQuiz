@@ -8,6 +8,7 @@ import { ScoreBoard } from "../../companents/ScoreBoard/ScoreBoard";
 import { About } from "../../companents/About/About";
 import { OnlineVideos } from "../../companents/OnlineVideos/OnlineVideos";
 import ExamDetails from "../../companents/ExamDetails/ExamDetails";
+import { ExamStart } from "../../companents/ExamStart/ExamStart";
 export const Dashboard = () => {
   const [page, setPage] = useState(0); // 0- dashboard , 1 - exams, 2 - online video, 3 - ScoreBoard, 4 - about
   return (
@@ -25,7 +26,8 @@ export const Dashboard = () => {
           {page === 2 && <OnlineVideos />}
           {page === 3 && <ScoreBoard />}
           {page === 4 && <About />}
-          {page === 5 && <ExamDetails />}
+          {page === 5 && <ExamDetails setPage={setPage} />}
+          {page === 6 && <ExamStart />}
         </div>
       </div>
     </div>

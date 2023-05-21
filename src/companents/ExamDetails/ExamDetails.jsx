@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../ExamDetails/ExamDetails.module.css";
 import Button from "../Button/Button"
 import Student from "../../assets/images/Tiny students learning online lesson via laptop 1.svg"
-function ExamDetails() {
+function ExamDetails({setPage}) {
   return (
     <div className={`${styles["exam-details"]}`}>
       <div className={styles.content}>
@@ -16,7 +16,8 @@ function ExamDetails() {
           </p>
           <span>Pulsuz</span>
           <div className={styles["content__btn"]}>
-          <Button
+          <Button 
+          onClick={()=>{setPage(6)}}
           size={"md"}
           color={"primary"}
           >
