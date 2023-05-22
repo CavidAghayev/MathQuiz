@@ -3,7 +3,7 @@ import Input from "../../sections/Input/Input";
 import Test from "../../assets/images/image 45.svg";
 import Button from "../Button/Button"
 import { useState } from "react";
-export const ExamStart = ({}) => {
+export const ExamStart = ({setPage}) => {
   const [formData, setFormData] = useState({});
   console.log(formData);
   return (
@@ -58,6 +58,7 @@ export const ExamStart = ({}) => {
       </div>
       <div className={styles.btn}>
         <Button
+        onClick={()=>setPage(7)}
         size={"lg"}
         color={"primary"}
         >
