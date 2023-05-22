@@ -1,7 +1,5 @@
 import styles from "../Exam/Exam.module.css";
 import Button from "../Button/Button";
-import { useNavigate } from "react-router-dom";
-
 function Exam({ image, examtitle, exam, setPage }) {
   return (
     <div className={styles.exam}>
