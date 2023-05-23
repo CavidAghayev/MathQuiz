@@ -1,18 +1,37 @@
 import styles from "../Exams/Exams.module.css";
 import Input from "../../sections/Input/Input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Select } from "../../sections/Select/Select";
 import Arrow from "../../assets/images/arrow-down.svg";
 import Search from "../../assets/images/search-normal.svg";
 import { useSelector } from "react-redux";
 import Exam from "../../companents/Exam/Exam";
-export const Exams = ({setPage}) => {
+
+export const Exams = ({ setPage }) => {
   const [formData, setFormData] = useState({});
+  const [data, setData] = useState([]);
   // console.log(formData.search);
   const finalExams = useSelector((state) => state.exams.exams);
-  finalExams?.items?.filter((item) =>
-    item.fields.text.toLowerCase().includes("qi")
-  );
+  useEffect(() => {
+    if (formData.search === "") {
+      setData(finalExams.items);
+    } else {
+      setData((pre) =>
+        pre?.filter((item) => {
+          return item.fields.text.toLowerCase().includes(formData.search);
+        })
+      );
+    }
+  }, [formData.search]);
+
+  useEffect(() => {
+    setData(finalExams.items);  
+  }, []);
+
+  useEffect(() => {
+    console.log("ds", data);
+  }, [data]);
+
   return (
     <div className={styles.exams}>
       <div className={styles.research}>
@@ -54,10 +73,10 @@ export const Exams = ({setPage}) => {
         </form>
       </div>
       <div className={styles["final-exams"]}>
-        {finalExams?.items?.map((exam) => {
+        {data.map((exam) => {
           return (
-            <Exam 
-            setPage={setPage}
+            <Exam
+              setPage={setPage}
               key={exam.sys.id}
               exam={exam}
               image={exam.fields.image.fields.file.url}

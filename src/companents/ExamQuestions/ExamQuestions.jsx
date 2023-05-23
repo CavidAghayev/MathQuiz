@@ -14,12 +14,12 @@ export const ExamQuestions = () => {
       second = 60;
     }
     second--;
-
+// paddStart, padEnd
     if (minute === 0 && second === 0) {
       second = 0;
       clearInterval(timerInterval);
     }
-    if (minute < 10) {
+    if (minute < 10) {  
       result = `0${minute} : 0${second}`;
     } else {
       result = `0${minute} : ${second}`;

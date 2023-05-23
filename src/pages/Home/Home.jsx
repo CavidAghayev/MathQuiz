@@ -29,7 +29,7 @@ function Home() {
     contentfulClient
       .getEntries({ content_type: "exam", order: "-sys.createdAt" })
       .then((data) => {
-        dispatch(setExams(data));
+        dispatch(setExams(data));g
         //  console.log(setExams(data));
       })
       .catch((error) => console.log(error.message));
