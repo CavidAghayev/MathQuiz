@@ -11,26 +11,50 @@ export const Exams = ({ setPage }) => {
   const [formData, setFormData] = useState({});
   const [data, setData] = useState([]);
   const [options, setOptions] = useState({});
+  console.log(options);
   const finalExams = useSelector((state) => state.exams.exams);
   useEffect(() => {
     if (formData.search === "") {
-      setData(finalExams.items);
+      setData([...finalExams.items]);
     } else {
-      setData((pre) =>
-        pre?.filter((item) => {
-          return item.fields.text.toLowerCase().includes(formData.search);
-        })
-      );
+      setData((prev) => {
+        return prev?.filter((item) => {
+          return (
+            item.fields.text.toLowerCase().includes(formData.search) ||
+            item.fields.title.toLowerCase().includes(formData.search)
+          );
+        });
+      });
     }
   }, [formData.search]);
 
   useEffect(() => {
+    if (options.type === "") {
+      setData([...finalExams.items]);
+    } else {
+      setData((prev) => {
+        return prev?.filter((item) => {
+          return item.fields.title.toLowerCase().includes(options.type);
+        });
+      });
+    }
+  }, [options.type]);
+
+  useEffect(() => {
+    if (options.price === "") {
+      setData([...finalExams.items]);
+    } else {
+      setData((prev) => {
+    return     prev?.filter((item) => {
+        return   item.fields.text.toLowerCase().includes(options.price);
+        });
+      });
+    }
+  }, [options.price]);
+
+  useEffect(() => {
     setData(finalExams.items);
   }, []);
-
-  useEffect(()=>{
-
-  },[options])
   return (
     <div className={styles.exams}>
       <div className={styles.research}>
@@ -54,30 +78,29 @@ export const Exams = ({ setPage }) => {
               <img src={Arrow} alt="" />
               <Select
                 size={"sm"}
-                value={options.value}
+                value={options.type}
                 onChange={(e) =>
-                  setOptions({ ...options, value: e.target.value })
+                  setOptions({ ...options, type: e.target.value })
                 }
               >
                 <option value="type">Növ</option>
-                <option value="nine">9-cu sinif buraxılış</option>
-                <option value="ten">10-cu sinif buraxılış</option>
-                <option value="eleven">11-cu sinif buraxılış</option>
+                <option value="9">9-cu sinif buraxılış</option>
+                <option value="10">10-cu sinif buraxılış</option>
+                <option value="11">11-cu sinif buraxılış</option>
               </Select>
             </div>
             <div className={styles.select__price}>
               <img src={Arrow} alt="" />
               <Select
                 size={"sm"}
-                value={options.value}
+                value={options.price}
                 onChange={(e) =>
-                  setOptions({ ...options, value: e.target.value })
+                  setOptions({ ...options, price: e.target.value })
                 }
               >
                 <option value="price">Qiymət</option>
-                <option value="five">5</option>
-                <option value="ten">10</option>
-                <option value="fifteen">15</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
               </Select>
             </div>
           </div>
