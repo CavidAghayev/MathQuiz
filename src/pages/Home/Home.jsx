@@ -1,5 +1,5 @@
 import styles from "../Home/Home.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Exam from "../../companents/Exam/Exam";
 import Button from "../../companents/Button/Button";
 import { useNavigate } from "react-router-dom";
@@ -9,42 +9,17 @@ import Clock from "../../assets/images/clock.svg";
 import User from "../../assets/images/user.svg";
 import Crown from "../../assets/images/crown-2.svg";
 import Line from "../../assets/images/Line 1.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { setStudents } from "../../Store/StudentsSlice";
-import { contentfulClient } from "../../libs/contentul";
-import { setExams } from "../../Store/ExamsSLice";
+import { useSelector } from "react-redux";
 import Header from "../../sections/Header/Header";
 
 function Home() {
   const [showExam, setShowExam] = useState(3);
-  // const [examCount, setExamCount] = useState(0);
   const navigate = useNavigate();
   const [showStudent, setShowStudent] = useState(3);
-  // const [studentCount, setStudentCount] = useState(0);
   const students = useSelector((state) => state.students.students);
   const exams = useSelector((state) => state.exams.exams);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    contentfulClient
-      .getEntries({ content_type: "exam", order: "-sys.createdAt" })
-      .then((data) => {
-        dispatch(setExams(data));g
-        //  console.log(setExams(data));
-      })
-      .catch((error) => console.log(error.message));
-  }, []);
-
-  useEffect(() => {
-    contentfulClient
-      .getEntries({ content_type: "student", order: "-sys.createdAt" })
-      .then((data) => {
-        dispatch(setStudents(data));
-      })
-      .catch((error) => console.log(error.message));
-  }, []);
-
-  function showExamFunc(e) {
+  function showExamFunc() {
     if (showExam) {
       setShowExam(showExam + 4);
     } else {
