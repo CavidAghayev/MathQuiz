@@ -19,7 +19,7 @@ function Home() {
   const students = useSelector((state) => state.students.students);
   const exams = useSelector((state) => state.exams.exams);
 
-  function showExamFunc() {
+  function showExamFunc(e) {
     if (showExam) {
       setShowExam(showExam + 4);
     } else {

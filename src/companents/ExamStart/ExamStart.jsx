@@ -1,9 +1,9 @@
 import styles from "../../companents/ExamStart/ExamStart.module.css";
 import Input from "../../sections/Input/Input";
 import Test from "../../assets/images/image 45.svg";
-import Button from "../Button/Button"
+import Button from "../Button/Button";
 import { useState } from "react";
-export const ExamStart = ({setPage}) => {
+export const ExamStart = ({ setPage }) => {
   const [formData, setFormData] = useState({});
   console.log(formData);
   return (
@@ -52,17 +52,13 @@ export const ExamStart = ({setPage}) => {
       </div>
       <div className={styles.text}>
         <p>
-          Məlumatlar doğrudursa imtahana başlaya bilərsiniz, <br /> başladıqdan sonra
-          əvvəlki səhifəyə qayıda <br /> bilməyəcəksiniz.
+          Məlumatlar doğrudursa imtahana başlaya bilərsiniz, <br /> başladıqdan
+          sonra əvvəlki səhifəyə qayıda <br /> bilməyəcəksiniz.
         </p>
       </div>
       <div className={styles.btn}>
-        <Button
-        onClick={()=>setPage(7)}
-        size={"lg"}
-        color={"primary"}
-        >
-            {"İmtahana başla"}
+        <Button onClick={() => setPage(7)} size={"lg"} color={"primary"}>
+          {"İmtahana başla"}
         </Button>
       </div>
     </div>
