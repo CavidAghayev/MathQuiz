@@ -11,7 +11,6 @@ export const Exams = ({ setPage }) => {
   const [formData, setFormData] = useState({});
   const [data, setData] = useState([]);
   const [options, setOptions] = useState({});
-  console.log(options);
   const finalExams = useSelector((state) => state.exams.exams);
   useEffect(() => {
     if (formData.search === "") {
@@ -26,8 +25,12 @@ export const Exams = ({ setPage }) => {
   }, [formData.search]);
 
   useEffect(() => {
-    setData(finalExams.items);  
+    setData(finalExams.items);
   }, []);
+
+  useEffect(()=>{
+
+  },[options])
   return (
     <div className={styles.exams}>
       <div className={styles.research}>
@@ -49,29 +52,28 @@ export const Exams = ({ setPage }) => {
           <div className={styles.select}>
             <div className={styles.select__type}>
               <img src={Arrow} alt="" />
-              <Select size={"sm"}
-              value={options.value}
-                onChange={(e)=> setOptions({...options, value: e.target.value})}
+              <Select
+                size={"sm"}
+                value={options.value}
+                onChange={(e) =>
+                  setOptions({ ...options, value: e.target.value })
+                }
               >
-                <option 
-                value="type"
-                >Növ</option>
-                <option 
-                value="nine"
-                >9-cu sinif buraxılış</option>
-                <option 
-                value="ten"
-                
-                >10-cu sinif buraxılış</option>
-                <option 
-                value="eleven"
-                
-                >11-cu sinif buraxılış</option>
+                <option value="type">Növ</option>
+                <option value="nine">9-cu sinif buraxılış</option>
+                <option value="ten">10-cu sinif buraxılış</option>
+                <option value="eleven">11-cu sinif buraxılış</option>
               </Select>
             </div>
             <div className={styles.select__price}>
               <img src={Arrow} alt="" />
-              <Select size={"sm"}>
+              <Select
+                size={"sm"}
+                value={options.value}
+                onChange={(e) =>
+                  setOptions({ ...options, value: e.target.value })
+                }
+              >
                 <option value="price">Qiymət</option>
                 <option value="five">5</option>
                 <option value="ten">10</option>
