@@ -10,7 +10,8 @@ import Exam from "../../companents/Exam/Exam";
 export const Exams = ({ setPage }) => {
   const [formData, setFormData] = useState({});
   const [data, setData] = useState([]);
-  // console.log(formData.search);
+  const [options, setOptions] = useState({});
+  console.log(options);
   const finalExams = useSelector((state) => state.exams.exams);
   useEffect(() => {
     if (formData.search === "") {
@@ -27,11 +28,6 @@ export const Exams = ({ setPage }) => {
   useEffect(() => {
     setData(finalExams.items);  
   }, []);
-
-  useEffect(() => {
-    console.log("ds", data);
-  }, [data]);
-
   return (
     <div className={styles.exams}>
       <div className={styles.research}>
@@ -53,11 +49,24 @@ export const Exams = ({ setPage }) => {
           <div className={styles.select}>
             <div className={styles.select__type}>
               <img src={Arrow} alt="" />
-              <Select size={"sm"}>
-                <option value="type">Növ</option>
-                <option value="nine">9-cu sinif buraxılış</option>
-                <option value="ten">10-cu sinif buraxılış</option>
-                <option value="eleven">11-cu sinif buraxılış</option>
+              <Select size={"sm"}
+              value={options.value}
+                onChange={(e)=> setOptions({...options, value: e.target.value})}
+              >
+                <option 
+                value="type"
+                >Növ</option>
+                <option 
+                value="nine"
+                >9-cu sinif buraxılış</option>
+                <option 
+                value="ten"
+                
+                >10-cu sinif buraxılış</option>
+                <option 
+                value="eleven"
+                
+                >11-cu sinif buraxılış</option>
               </Select>
             </div>
             <div className={styles.select__price}>

@@ -1,11 +1,12 @@
 import styles from "../Select/Select.module.css";
-export const Select = ({ size, children }) => {
+export const Select = ({ size, children , id, value, onChange }) => {
   return (
     <div>
       <select
-        name=""
-        id=""
+        id={id}
         className={`${styles.select} ${styles[`select--${size}`]}`}
+        onChange={onChange}
+        value={value}
       >
         {children}
       </select>
