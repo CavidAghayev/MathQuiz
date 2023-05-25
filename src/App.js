@@ -7,7 +7,7 @@ import ExamDetails from "./companents/ExamDetails/ExamDetails";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import ProvideExams from "./ProvideExams";
 
-function App() {g
+function App() {
   return (
     <ProvideExams>
       <Router>
