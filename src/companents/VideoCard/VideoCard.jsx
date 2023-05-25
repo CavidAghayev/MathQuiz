@@ -9,18 +9,29 @@ export const VideoCard = ({ name, questionCount, classNumber }) => {
   const buttonRef = useRef();
   const pauseButtonRef = useRef();
   const playButtonRef = useRef();
-  return (
-    <div className={styles.videocard}>
-      <div className={styles.video}>
-        <div className={styles.overlay}>
-        <PauseButton ref={pauseButtonRef} className={styles.pause}/>
-        <div
-          onClick={() => {
-            videoRef.current.play();
+  const overlayRef = useRef();
+  const playClick =()=>{
+    overlayRef.current.style.display = "none"
+    videoRef.current.play();
             if(playButtonRef.current.style.display = 'none'){
               pauseButtonRef.current.style.display = "block"
             }
-          }}
+  }
+  const btnClick =()=>{
+    overlayRef.current.style.display = "none"
+    videoRef.current.play();
+    if(playButtonRef.current.style.display = 'none'){
+      pauseButtonRef.current.style.display = "block"
+    }
+    
+  }
+  return (
+    <div className={styles.videocard}>
+      <div className={styles.video}>
+        <div ref={overlayRef} className={styles.overlay}>
+        <PauseButton ref={pauseButtonRef} className={styles.pause}/>
+        <div
+          onClick={() => playClick()}
           className={styles["play-btn"]}
           ref={buttonRef}
         >
@@ -40,7 +51,7 @@ export const VideoCard = ({ name, questionCount, classNumber }) => {
           <span>{`${classNumber}-cu sinif buraxılış imtahanı`}</span>
         </div>
         <div className={styles.btn}>
-          <Button size={"sm"} color={"primary"}>
+          <Button onClick={()=> btnClick()} size={"sm"} color={"primary"}>
             {"Videonu izlə"}
           </Button>
         </div>
