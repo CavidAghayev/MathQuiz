@@ -129,6 +129,7 @@
 .exam__icons {
     margin-bottom: 26px;
     display: flex;
+    align-items: center;
     gap: 16px;
 }
 

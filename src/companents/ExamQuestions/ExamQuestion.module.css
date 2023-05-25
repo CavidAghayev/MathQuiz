@@ -53,13 +53,46 @@
 .items {
     display: flex;
     gap: 77px;
+    margin-bottom: 61px;
 }
-.timer{
+
+.timer {
     width: 54px;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 27px;
-color: red;
-/* background-color: red;   */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: red;
+    /* background-color: red;   */
+}
+
+
+
+
+.pages-line {
+    width: 60%;
+    height: 10px;
+    background: #E2E2E2;
+    border-radius: 33px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.line {
+    height: 10px;
+    border-radius: 33px;
+    background: #675AF0;
+}
+
+.page-number {
+    margin-bottom: 14px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2B2A2A;
+}
+.start-button{
+    width: 219px;
 }

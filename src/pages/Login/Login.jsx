@@ -2,7 +2,7 @@ import styles from "../Login/Login.module.css";
 import Input from "../../sections/Input/Input";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
-import Eye from "../../assets/images/eye.svg";
+import { ReactComponent as Eye } from "../../assets/images/eye.svg";
 import Header from "../../sections/Header/Header";
 function Login() {
   const navigate = useNavigate();
@@ -20,7 +20,6 @@ function Login() {
     navigate("/dashboard");
   };
 
-  
   console.log(formData);
   return (
     <>
@@ -46,7 +45,11 @@ function Login() {
                     text="Email"
                   />
                   <div className={styles["input-password"]}>
-                    <img onClick={() => showPassword()} src={Eye} alt="" />
+                    {/* <img onClick={() => showPassword()} src={Eye} alt="" /> */}
+                    <Eye
+                      onClick={() => showPassword()}
+                      className={styles["eye-image"]}
+                    />
                     <Input
                       value={formData.password}
                       onChange={(e) => {

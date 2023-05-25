@@ -3,7 +3,7 @@ import Input from "../../sections/Input/Input";
 import Button from "../../companents/Button/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Eye from "../../assets/images/eye.svg";
+import { ReactComponent as Eye } from "../../assets/images/eye.svg";
 import Header from "../../sections/Header/Header";
 function Register() {
   const [formData, setFormData] = useState({});
@@ -75,7 +75,10 @@ function Register() {
                     />
                   </div>
                   <div className={styles["input-password"]}>
-                    <img onClick={() => showPassword()} src={Eye} alt="" />
+                  <Eye
+                      onClick={() => showPassword()}
+                      className={styles["eye-image"]}
+                    />
                     <Input
                       value={formData.password}
                       onChange={(e) => {

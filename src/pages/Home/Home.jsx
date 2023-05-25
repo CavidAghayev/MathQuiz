@@ -5,10 +5,10 @@ import Button from "../../companents/Button/Button";
 import { useNavigate } from "react-router-dom";
 import Students from "../../companents/Student/Student";
 import Footer from "../../sections/Footer/Footer";
-import Clock from "../../assets/images/clock.svg";
-import User from "../../assets/images/user.svg";
-import Crown from "../../assets/images/crown-2.svg";
-import Line from "../../assets/images/Line 1.svg";
+import { ReactComponent as Clock } from "../../assets/images/clock.svg";
+import { ReactComponent as User } from "../../assets/images/user.svg";
+import { ReactComponent as Crown } from "../../assets/images/crown-2.svg";
+import { ReactComponent as Line } from "../../assets/images/Line 1.svg";
 import { useSelector } from "react-redux";
 import Header from "../../sections/Header/Header";
 
@@ -99,11 +99,11 @@ function Home() {
               </p>
             </div>
             <div className={styles["exam__icons"]}>
-              <img src={User} alt="" />
-              <img src={Line} alt="" />
-              <img src={Clock} alt="" />
-              <img src={Line} alt="" />
-              <img src={Crown} alt="" />
+              <User />
+              <Line />
+              <Clock />
+              <Line />
+              <Crown />
             </div>
             <div className={styles["exam__info"]}>
               <div className={styles["info__content"]}>

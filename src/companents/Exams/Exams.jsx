@@ -32,8 +32,8 @@ export const Exams = ({ setPage }) => {
     if (options.type === "") {
       setData([...finalExams.items]);
     } else {
-      setData((prev) => {
-        return prev?.filter((item) => {
+      setData(() => {
+        return finalExams.items?.filter((item) => {
           return item.fields.title.toLowerCase().includes(options.type);
         });
       });
@@ -44,9 +44,9 @@ export const Exams = ({ setPage }) => {
     if (options.price === "") {
       setData([...finalExams.items]);
     } else {
-      setData((prev) => {
-    return     prev?.filter((item) => {
-        return   item.fields.text.toLowerCase().includes(options.price);
+      setData(() => {
+        return finalExams.items?.filter((item) => {
+          return item.fields.text.toLowerCase().includes(options.price);
         });
       });
     }
@@ -55,6 +55,7 @@ export const Exams = ({ setPage }) => {
   useEffect(() => {
     setData(finalExams.items);
   }, []);
+
   return (
     <div className={styles.exams}>
       <div className={styles.research}>
