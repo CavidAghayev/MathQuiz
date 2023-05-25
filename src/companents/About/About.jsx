@@ -3,12 +3,12 @@ import { contentfulClient } from "../../libs/contentul";
 import { useEffect, useState } from "react";
 import { Teacher } from "../Teacher/Teacher";
 export const About = () => {
-  const [teachers,setTeachers] = useState([]);
+  const [teachers, setTeachers] = useState([]);
   useEffect(() => {
     contentfulClient
       .getEntries({ content_type: "teacher", order: "-sys.createdAt" })
       .then((teacher) => {
-        setTeachers(teacher)
+        setTeachers(teacher);
       })
       .catch((error) => console.log(error.message));
   }, []);

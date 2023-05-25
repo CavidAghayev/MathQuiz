@@ -2,41 +2,40 @@ import styles from "../VideoCard/VideoCard.module.css";
 import Button from "../../companents/Button/Button";
 import Video from "../../assets/video/video (2).mp4";
 import { useRef } from "react";
-import {ReactComponent as PlayButton } from "../../assets/images/Vector.svg" 
-import {ReactComponent as PauseButton } from "../../assets/images/pause-button-svgrepo-com (2).svg" 
+import { ReactComponent as PlayButton } from "../../assets/images/Vector.svg";
+import { ReactComponent as PauseButton } from "../../assets/images/pause-button-svgrepo-com (2).svg";
 export const VideoCard = ({ name, questionCount, classNumber }) => {
   const videoRef = useRef();
   const buttonRef = useRef();
   const pauseButtonRef = useRef();
   const playButtonRef = useRef();
   const overlayRef = useRef();
-  const playClick =()=>{
-    overlayRef.current.style.display = "none"
+  const playClick = () => {
+    overlayRef.current.style.display = "none";
     videoRef.current.play();
-            if(playButtonRef.current.style.display = 'none'){
-              pauseButtonRef.current.style.display = "block"
-            }
-  }
-  const btnClick =()=>{
-    overlayRef.current.style.display = "none"
-    videoRef.current.play();
-    if(playButtonRef.current.style.display = 'none'){
-      pauseButtonRef.current.style.display = "block"
+    if ((playButtonRef.current.style.display = "none")) {
+      pauseButtonRef.current.style.display = "block";
     }
-    
-  }
+  };
+  const btnClick = () => {
+    overlayRef.current.style.display = "none";
+    videoRef.current.play();
+    if ((playButtonRef.current.style.display = "none")) {
+      pauseButtonRef.current.style.display = "block";
+    }
+  };
   return (
     <div className={styles.videocard}>
       <div className={styles.video}>
         <div ref={overlayRef} className={styles.overlay}>
-        <PauseButton ref={pauseButtonRef} className={styles.pause}/>
-        <div
-          onClick={() => playClick()}
-          className={styles["play-btn"]}
-          ref={buttonRef}
-        >
-            <PlayButton ref={playButtonRef} className={styles.play}/>
-        </div>
+          <PauseButton ref={pauseButtonRef} className={styles.pause} />
+          <div
+            onClick={() => playClick()}
+            className={styles["play-btn"]}
+            ref={buttonRef}
+          >
+            <PlayButton ref={playButtonRef} className={styles.play} />
+          </div>
         </div>
         <video ref={videoRef} style={{ width: "100%", borderRadius: "10px" }}>
           <source src={Video} type="video/mp4" />
@@ -51,7 +50,7 @@ export const VideoCard = ({ name, questionCount, classNumber }) => {
           <span>{`${classNumber}-cu sinif buraxılış imtahanı`}</span>
         </div>
         <div className={styles.btn}>
-          <Button onClick={()=> btnClick()} size={"sm"} color={"primary"}>
+          <Button onClick={() => btnClick()} size={"sm"} color={"primary"}>
             {"Videonu izlə"}
           </Button>
         </div>

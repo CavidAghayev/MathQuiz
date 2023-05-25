@@ -15,7 +15,9 @@ function Exam({ image, examtitle, exam, setPage }) {
           {"Testə başla"}
         </Button>
         <Button
-          onClick={() => {setPage(5)}}
+          onClick={() => {
+            setPage(5);
+          }}
           size={"sm"}
           color={"white"}
         >

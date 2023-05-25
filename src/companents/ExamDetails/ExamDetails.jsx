@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../ExamDetails/ExamDetails.module.css";
-import Button from "../Button/Button"
-import Student from "../../assets/images/Tiny students learning online lesson via laptop 1.svg"
-function ExamDetails({setPage}) {
+import Button from "../Button/Button";
+import Student from "../../assets/images/Tiny students learning online lesson via laptop 1.svg";
+function ExamDetails({ setPage }) {
   return (
     <div className={`${styles["exam-details"]}`}>
       <div className={styles.content}>
@@ -10,19 +10,21 @@ function ExamDetails({setPage}) {
           <h3>9-cu sinif buraxılış</h3>
           <p>
             Natural ədədlər.Adi və onluq kəsrlər.Faiz.Tam cəbri <br />
-            ifadələr.Çoxhədlinin vuruqlara ayrılması.Birməchullu <br /> tənliklər.n
-            dərəcəli Köklər.Rasional kəsrlər.Kəsr üstlü <br /> qüvvətin
-            xassələri.Üçbucaqlar.Çevrə.
+            ifadələr.Çoxhədlinin vuruqlara ayrılması.Birməchullu <br />
+            tənliklər.n dərəcəli Köklər.Rasional kəsrlər.Kəsr üstlü <br />
+            qüvvətin xassələri.Üçbucaqlar.Çevrə.
           </p>
           <span>Pulsuz</span>
           <div className={styles["content__btn"]}>
-          <Button 
-          onClick={()=>{setPage(6)}}
-          size={"md"}
-          color={"primary"}
-          >
-            {"Testə başla"}
-          </Button>
+            <Button
+              onClick={() => {
+                setPage(6);
+              }}
+              size={"md"}
+              color={"primary"}
+            >
+              {"Testə başla"}
+            </Button>
           </div>
         </div>
         <div className={styles["content__image"]}>
