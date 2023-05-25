@@ -8,15 +8,13 @@ export const VideoCard = ({ name, questionCount, classNumber }) => {
   return (
     <div className={styles.videocard}>
       <div className={styles.video}>
-        <div onClick={()=>{
-          videoRef.current.play()
-        }} className={styles["play-btn"]}>
-       
-        </div>
-        <video
-          ref={videoRef}
-          style={{ width: "100%", borderRadius: "10px" }}
-        >
+        <div
+          onClick={() => {
+            videoRef.current.play();
+          }}
+          className={styles["play-btn"]}
+        ></div>
+        <video ref={videoRef} style={{ width: "100%", borderRadius: "10px" }}>
           <source src={Video} type="video/mp4" />
         </video>
       </div>

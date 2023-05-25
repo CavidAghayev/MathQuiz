@@ -1,9 +1,9 @@
 import styles from "../Footer/Footer.module.css";
 import { Link } from "react-router-dom";
-import Youtube from "../../assets/images/youtube.svg";
-import Whatsapp from "../../assets/images/whatsapp.svg";
-import Instagram from "../../assets/images/instagram.svg";
-import Facebook from "../../assets/images/facebook.svg";
+import { ReactComponent as Youtube } from "../../assets/images/youtube.svg";
+import { ReactComponent as Whatsapp } from "../../assets/images/whatsapp.svg";
+import { ReactComponent as Instagram } from "../../assets/images/instagram.svg";
+import { ReactComponent as Facebook } from "../../assets/images/facebook.svg";
 function Footer() {
   return (
     <footer>
@@ -64,16 +64,16 @@ function Footer() {
         <div className={styles.contacts}>
           <div className={styles["location__icons"]}>
             <Link to={""}>
-              <img src={Youtube} alt="" />
+              <Youtube />
             </Link>
             <Link to={""}>
-              <img src={Whatsapp} alt="" />
+              <Whatsapp />
             </Link>
             <Link to={""}>
-              <img src={Facebook} alt="" />
+              <Facebook />
             </Link>
             <Link to={""}>
-              <img src={Instagram} alt="" />
+              <Instagram />
             </Link>
           </div>
           <div className={styles["contacts__end"]}>
