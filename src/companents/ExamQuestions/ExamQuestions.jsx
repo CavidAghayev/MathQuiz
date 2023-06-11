@@ -13,7 +13,7 @@ export const ExamQuestions = () => {
     if (page < 5) setPage(page + 1);
   };
   return (
-    <div className={styles.questions}>
+    <div className={styles["questions-page"]}>
       <div className={styles.heading}>
         <span>
           <b>İmtahan /</b> 9-cu sinif buraxılış
@@ -34,8 +34,10 @@ export const ExamQuestions = () => {
       <div className={styles["pages-line"]}>
         <div className={styles.line} style={{ width: lineSize + "%" }}></div>
       </div>
+      <div className={styles.questions}>
+        Salam
+      </div>
       <div className={styles["start-btn"]}>
-        -
         <Button size={"lg"} color={"primary"} onClick={() => clickHandle()}>
           {"Növbəti səhifə"}
         </Button>
