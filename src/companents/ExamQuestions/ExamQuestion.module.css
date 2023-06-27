@@ -78,7 +78,6 @@
     background: #E2E2E2;
     border-radius: 33px;
     margin: 0 auto;
-    margin-bottom: 40px;
 }
 
 .line {
@@ -96,7 +95,14 @@
     line-height: 22px;
     color: #2B2A2A;
 }
+.questions{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
 .start-btn {
     width: 219px;
+    margin: 0 auto;
 }

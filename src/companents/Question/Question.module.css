@@ -1,0 +1,39 @@
+.question h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2B2A2A;
+    margin-bottom: 5px;
+}
+
+.question span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #8A7E7E;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.answer {
+    width: 500px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.answer p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2B2A2A;
+}
